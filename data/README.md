@@ -47,7 +47,7 @@ To regenerate that CSV from the DOI archive, pass the extracted V27 and V34
 campaign directories explicitly. The script rejects smoke or unaudited
 campaigns, incomplete method--checkpoint cells, altered contract hashes, and
 seed/index mismatches; see `docs/TABLES_AND_DATA.md` for the full command.
-Exact file counts, byte counts, source-relative locations, and reserved-DOI
+Exact file counts, byte counts, source-relative locations, and DOI-record
 destinations for the five estimator components (including the small replay
 fixture) and the complete
 leader-source/acquisition trace campaign used by Figures 2 and 7 are listed in
