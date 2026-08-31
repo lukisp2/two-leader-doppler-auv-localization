@@ -1,0 +1,27 @@
+{
+  "campaign_name": "experiments_v35_closed_loop_stress_dev100",
+  "files": [
+    {
+      "exported_sha256": "fed2b3b34fa8bc573c3106333ff6273c69ba9da2563e06c7c83884e05d23e3d7",
+      "original_sha256": "a5e23ee5a15d0d4dab5bb9513244f3e278ee7ed8dbe0aea026a73e54fadbcaed",
+      "relative_path": "control/campaign_contract.json",
+      "source_root_replacements": 1
+    },
+    {
+      "exported_sha256": "11e41d9916394e0503fcaa757dc3862aa01084d0107e0012ba60a39ab3b23303",
+      "original_sha256": "11e41d9916394e0503fcaa757dc3862aa01084d0107e0012ba60a39ab3b23303",
+      "relative_path": "campaign_summary.json",
+      "source_root_replacements": 0
+    },
+    {
+      "exported_sha256": "611fc88db51fbb04782bab78b0297807911ddaa235f15b144cbcb682c2c84d53",
+      "original_sha256": "611fc88db51fbb04782bab78b0297807911ddaa235f15b144cbcb682c2c84d53",
+      "relative_path": "decision.json",
+      "source_root_replacements": 0
+    }
+  ],
+  "only_transformation": "literal source-root path replacement",
+  "schema_version": 1,
+  "scientific_values_changed": false,
+  "source_root_token": "${FROZEN_SOURCE_ROOT}"
+}

@@ -1,0 +1,7 @@
+# Small frozen fixtures required by unchanged legacy defaults and tests.
+code/experiments_v18_1_guard_ablation_dev_3seed/evaluations/dev100_seed_28001_range_45000_45099/metadata.json
+experiments_v18_1_guard_ablation_dev_3seed/evaluations/dev100_seed_28001_range_45000_45099/metadata.json
+code/experiments_v39_planner_component_ablation_dev100/campaign_summary.json
+experiments_v39_planner_component_ablation_smoke/campaign_summary.json
+data/tables/estimator_checkpoint_rows.csv
+data/tables/estimator_benchmark_summary.json

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or its data, please cite the associated article and the archived software release."
+title: "Two-Leader Doppler AUV Localization"
+type: software
+authors:
+  - family-names: Marchel
+    given-names: Łukasz
+    affiliation: "Faculty of Navigation and Naval Weapons, Polish Naval Academy"
+    email: l.marchel@amw.gdynia.pl
+repository-code: "https://github.com/lukisp2/two-leader-doppler-auv-localization"
+doi: "10.5281/zenodo.22214022"
+date-released: "2026-08-31"
+license: BSD-3-Clause
+version: 1.0.0
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22214022"
+    description: "The archived snapshot of software version 1.0.0."
+keywords:
+  - autonomous underwater vehicle
+  - active localization
+  - Doppler range rate
+  - cooperative navigation
+  - formation tracking
+  - multimodal estimation

@@ -1,0 +1,5 @@
+# Frozen reference environment (CPython 3.11.9).
+# Do not add numba: the archived reference results use the NumPy path.
+numpy==2.3.3
+gymnasium==1.2.3
+

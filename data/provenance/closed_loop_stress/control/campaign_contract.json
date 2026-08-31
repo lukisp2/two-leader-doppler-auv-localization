@@ -1,0 +1,368 @@
+{
+  "arm_condition_pairs": [
+    [
+      "nominal",
+      "v24_nominal_model"
+    ],
+    [
+      "doppler_common_bias_p003",
+      "v24_nominal_model"
+    ],
+    [
+      "doppler_differential_bias_003",
+      "v24_nominal_model"
+    ],
+    [
+      "doppler_scale_102",
+      "v24_nominal_model"
+    ],
+    [
+      "colored_noise_rho09_sd003",
+      "v24_nominal_model"
+    ],
+    [
+      "dropout_iid10",
+      "v24_nominal_model"
+    ],
+    [
+      "broadcast_delay_2s",
+      "v24_nominal_model"
+    ],
+    [
+      "dead_reckoning_scale_101",
+      "v24_nominal_model"
+    ],
+    [
+      "nominal",
+      "v35_bias_gate_300"
+    ],
+    [
+      "doppler_common_bias_p003",
+      "v35_bias_gate_300"
+    ],
+    [
+      "doppler_differential_bias_003",
+      "v35_bias_gate_300"
+    ],
+    [
+      "colored_noise_rho09_sd003",
+      "v35_bias_gate_300"
+    ]
+  ],
+  "audited_lock_config": {
+    "base": {
+      "hold_alternative_delta_chi2": 7.815,
+      "hold_forward_rmse_mps": 0.1,
+      "hold_full_rmse_mps": 0.1,
+      "hold_radius95_m": 10.0,
+      "hold_recent_rmse_mps": 0.1,
+      "hold_search_agreement_m": 7.0,
+      "loss_consecutive_actions": 3,
+      "minimum_release_time_s": 60.0,
+      "release_alternative_delta_chi2": 13.82,
+      "release_consecutive_actions": 3,
+      "release_forward_min_samples": 20,
+      "release_forward_rmse_mps": 0.08,
+      "release_full_rmse_mps": 0.08,
+      "release_global_age_s": 65.0,
+      "release_global_stability_m": 3.0,
+      "release_local_stability_count": 3,
+      "release_local_stability_m": 2.0,
+      "release_radius95_m": 7.0,
+      "release_recent_rmse_mps": 0.08,
+      "release_search_agreement_m": 2.0
+    },
+    "hold_global_radius95_m": 10.0,
+    "hold_global_rmse_mps": 0.1,
+    "hold_local_global_agreement_m": 7.0,
+    "release_global_radius95_m": 7.0,
+    "release_global_rmse_mps": 0.08,
+    "release_local_global_agreement_m": 2.0
+  },
+  "bias_switch_conditions": [
+    "nominal",
+    "doppler_common_bias_p003",
+    "doppler_differential_bias_003",
+    "colored_noise_rho09_sd003"
+  ],
+  "conditions": [
+    "nominal",
+    "doppler_common_bias_p003",
+    "doppler_differential_bias_003",
+    "doppler_scale_102",
+    "colored_noise_rho09_sd003",
+    "dropout_iid10",
+    "broadcast_delay_2s",
+    "dead_reckoning_scale_101"
+  ],
+  "created_at_utc": "2026-07-16T07:00:02.772482+00:00",
+  "environment_metadata_path": "${FROZEN_SOURCE_ROOT}/experiments_v18_1_guard_ablation_dev_3seed/evaluations/dev100_seed_28001_range_45000_45099/metadata.json",
+  "environment_metadata_sha256": "b486d280e57661f4b526b926e0f8e32a5373b99f585de09e3354d87b3342dfe7",
+  "episode_start": 0,
+  "episodes": 100,
+  "estimator_config": {
+    "alternative_separation_m": 7.0,
+    "candidate_radial_distribution": "uniform_radius",
+    "coarse_candidates": 4096,
+    "coarse_start_separation_m": 5.0,
+    "coarse_sweeps": 2,
+    "gate_mode": "raw",
+    "gradient_tolerance": 1e-10,
+    "initial_damping": 0.001,
+    "local_starts": 48,
+    "maximum_iterations": 80,
+    "maximum_modes": 12,
+    "measurement_sigma_mps": 0.05,
+    "mode_cluster_radius_m": 1.0,
+    "step_tolerance_m": 1e-08
+  },
+  "evaluator_config": {
+    "coarse_candidates": 4096,
+    "coarse_sweeps": 2,
+    "global_candidate_seed": 27001,
+    "local_starts": 48,
+    "maximum_modes": 12,
+    "measurement_sigma_mps": 0.05,
+    "pf_design_seed": 27201,
+    "pf_ess_fraction": 0.5,
+    "pf_kernel_h": 0.12,
+    "pf_particles_large": 16384,
+    "pf_particles_small": 4096,
+    "window_candidate_seed": 27001,
+    "window_s": 60.0
+  },
+  "expected_runs": 1200,
+  "experiment_version": "v35_closed_loop_stress_1.0",
+  "fixed_horizon_actions": 220,
+  "fresh_seed_audit": {
+    "finding_count": 0,
+    "findings": [],
+    "fresh": true,
+    "range": [
+      48100,
+      48199
+    ]
+  },
+  "model_decision_time_s": 300.0,
+  "package_versions": {
+    "gymnasium": "1.2.3",
+    "numba": null,
+    "numpy": "2.2.1",
+    "python": "3.12.8"
+  },
+  "planner_config": {
+    "action_change_weight": 0.05,
+    "action_energy_weight": 0.05,
+    "covariance_axis_scale": 2.0,
+    "horizon_s": 30.0,
+    "hypothesis_cluster_radius_m": 1.0,
+    "maximum_hypotheses": 16,
+    "pair_separation_m": 7.0,
+    "pair_weight": 0.25,
+    "prediction_dt_s": 1.0
+  },
+  "purpose": "frozen development-only V35 closed-loop stress campaign",
+  "reserved_final_range_untouched": [
+    49900,
+    50999
+  ],
+  "runner_version": "v35_closed_loop_stress_runner_1.0",
+  "seeds": [
+    48100,
+    48101,
+    48102,
+    48103,
+    48104,
+    48105,
+    48106,
+    48107,
+    48108,
+    48109,
+    48110,
+    48111,
+    48112,
+    48113,
+    48114,
+    48115,
+    48116,
+    48117,
+    48118,
+    48119,
+    48120,
+    48121,
+    48122,
+    48123,
+    48124,
+    48125,
+    48126,
+    48127,
+    48128,
+    48129,
+    48130,
+    48131,
+    48132,
+    48133,
+    48134,
+    48135,
+    48136,
+    48137,
+    48138,
+    48139,
+    48140,
+    48141,
+    48142,
+    48143,
+    48144,
+    48145,
+    48146,
+    48147,
+    48148,
+    48149,
+    48150,
+    48151,
+    48152,
+    48153,
+    48154,
+    48155,
+    48156,
+    48157,
+    48158,
+    48159,
+    48160,
+    48161,
+    48162,
+    48163,
+    48164,
+    48165,
+    48166,
+    48167,
+    48168,
+    48169,
+    48170,
+    48171,
+    48172,
+    48173,
+    48174,
+    48175,
+    48176,
+    48177,
+    48178,
+    48179,
+    48180,
+    48181,
+    48182,
+    48183,
+    48184,
+    48185,
+    48186,
+    48187,
+    48188,
+    48189,
+    48190,
+    48191,
+    48192,
+    48193,
+    48194,
+    48195,
+    48196,
+    48197,
+    48198,
+    48199
+  ],
+  "smoke": false,
+  "source_manifest_sha256": "559a1842fd3365a2335d92790b581742dceee25599f993033481752c3c167fb9",
+  "source_sha256": {
+    "EXPERIMENT_PROTOCOL_V35_CLOSED_LOOP_STRESS.md": "41fe3fc602ac4d63f00bb271cf420e2a3cf72c090fb98e0fae5852f04919866a",
+    "audit_v35_campaign.py": "0b87e087cdd1cd5259d0b0881c2c99ada3f66e97aab26ceeb62ba6867afc8d54",
+    "baseline_controllers_v11.py": "f10764ef67dddc40b3fc8ea385921ac0b0ca796b6461208694579a059d667ae9",
+    "run_v20_positioning_ablation.py": "63c0a1154f87279b76f6474b9e564eef90ec1db9bbd773640d7c9bba088f1f31",
+    "run_v35_closed_loop_stress.py": "50bc6d2f27d200f256e35a684c587d0880bf09dd9530873222ccd164d3c30af2",
+    "tests/test_uuv_v35_closed_loop_stress.py": "82a9eec510381105fa1a0692558ff35721b4b6f0b32dc9624a6fafb318f239d5",
+    "uuv_v10_info_tracking.py": "5a232dec8a1bb311cec7cdbeced6b0fb1afbf182e0703e0f2baf4974cc220ddd",
+    "uuv_v11_metrics.py": "85cacb8ffc6ca611b7aec74fff079688b0df861448eca3779502b6d4ae92d477",
+    "uuv_v11_online.py": "ac10221ac87d37a631d53e860965ed81b067e08481f46b8e12f04ec214607bf5",
+    "uuv_v11_rng.py": "862521ab0ad5e0be1fe85f2325501f1cf78cc84feabd926587a6cddc67a87f41",
+    "uuv_v12_hybrid.py": "79d4c29ca6bea84dd65e80ec159c218819747a8ed9b9caaffde3a3b84b5308ec",
+    "uuv_v13_info_ray.py": "62f9722030312f81e8bc808ff25decde780b429f383632525e0a6ddd68d3c03f",
+    "uuv_v14_info_ray.py": "32d8239ce1d53862764295a8d9301cc84c6dcac29262cf77f29f96da001ca096",
+    "uuv_v15_contextual_gain.py": "fc5d5e8a2840abfb73702d7a2ccf4f256d3fb54c0ed7722a4ea30556c2a32b17",
+    "uuv_v16_temporal_escalation.py": "06b8c1ebfa09bb47a8684a9b7fc936c2290e9960b0c2be4ac267f24f23ee2cd0",
+    "uuv_v17_bounded_escalation.py": "dc5336774c2f3fa940d7abfd8f97c9226680c9bc8fb4a71c01c97b9776de2e77",
+    "uuv_v18_resampling_guard.py": "b057be4435aa1bd07070b754d4ef5160b2b36a406638359801afed1c9f359a3a",
+    "uuv_v19_observability.py": "edbe72b6c3a92ce5019335fa3f3577c3c8162a38ba4e6bd5d231ab54eb4fe188",
+    "uuv_v20_positioning_ablation.py": "2bceb068a83a5d67abbfe52f9b80d300a47c483fd8082f4a8cb65470c1d63c8a",
+    "uuv_v21_causal_lock.py": "b67cd49dd0929c0e7a74cdd89796751ed6b4a3bb6b3d87e60fdf7d27909164c9",
+    "uuv_v22_active_acquisition.py": "9274ceed7a15c3cde4adad8eaaa539c3d7c73396e62a3f2e7bebb8ebf327fdf3",
+    "uuv_v24_audited_gate.py": "9eba91817a9c5842b0db7da18cde7539f09ba49413b15ad3a76941ed67664a24",
+    "uuv_v27_publication_baselines.py": "f5dddd4a864801a1852b0e771d96a3599e00cb704de9355edc0f5e40d248858d",
+    "uuv_v28_estimator_stress.py": "d43affda3872373e74bceac30dba3528fc515b878023dc64403bb5316f8dc576",
+    "uuv_v30_profiled_bias.py": "a8b8e05f811aa4b34e12efb158876569ad3555307f535cabba5afef68e92b5c3",
+    "uuv_v31_bias_evidence_gate.py": "f80c48021bf367101c79477d4576e009178e411c38aac75ac31dd0872c2ab108",
+    "uuv_v32_bias_time_to_evidence.py": "4677e141d023ac72a4f1a5df7169425c58c06a84c14b86a7fe4b23fe0b488f3c",
+    "uuv_v35_closed_loop_stress.py": "b39121947ac80a7b9dfe1d991fb1e2bd1db8919f834a98a7358f2ae865affc24",
+    "uuv_v8_temporal_infofix.py": "5e01cde25d7abb4c044c8b771f661176705b5ec1f6e519107a0f1c82e5884b7b"
+  },
+  "stress_contract": {
+    "base_design_seed": 28000000,
+    "broadcast_delay_s": 2.0,
+    "broadcast_offsets_m": [
+      [
+        2.0,
+        -1.0,
+        0.5
+      ],
+      [
+        -2.0,
+        1.0,
+        -0.5
+      ]
+    ],
+    "colored_rho": 0.9,
+    "colored_stationary_sd_mps": 0.03,
+    "condition_codes": {
+      "broadcast_delay_2s": 6,
+      "broadcast_offset_2m": 7,
+      "colored_noise_rho09_sd003": 4,
+      "dead_reckoning_drift_001": 9,
+      "dead_reckoning_scale_101": 8,
+      "doppler_common_bias_p003": 1,
+      "doppler_differential_bias_003": 2,
+      "doppler_scale_102": 3,
+      "dropout_iid10": 5,
+      "nominal": 0
+    },
+    "conditions": [
+      "nominal",
+      "doppler_common_bias_p003",
+      "doppler_differential_bias_003",
+      "doppler_scale_102",
+      "colored_noise_rho09_sd003",
+      "dropout_iid10",
+      "broadcast_delay_2s",
+      "broadcast_offset_2m",
+      "dead_reckoning_scale_101",
+      "dead_reckoning_drift_001"
+    ],
+    "dead_reckoning_drift_velocity_mps": [
+      0.0087287156,
+      -0.0043643578,
+      0.0021821789
+    ],
+    "dead_reckoning_scale": 1.01,
+    "doppler_common_bias_mps": [
+      0.03,
+      0.03
+    ],
+    "doppler_differential_bias_mps": [
+      0.03,
+      -0.03
+    ],
+    "doppler_scale": 1.02,
+    "dropout_forced_times_s": [
+      1.0,
+      120.0,
+      440.0
+    ],
+    "dropout_probability": 0.1
+  }
+}

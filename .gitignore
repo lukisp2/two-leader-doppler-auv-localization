@@ -1,0 +1,25 @@
+.DS_Store
+.idea/
+.vscode/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.coverage
+.pytest_cache/
+.mypy_cache/
+
+# Generated campaign output. Curated, compact table inputs are tracked.
+results/*
+!results/.gitkeep
+data/raw/
+data/downloads/
+*.log
+*.pid
+SHA256SUMS.preliminary
+/code/experiments_v34_mhe60_baseline_smoke/
+
+# Large numerical traces must be attached to a release/DOI archive.
+*.npz
+*.npy

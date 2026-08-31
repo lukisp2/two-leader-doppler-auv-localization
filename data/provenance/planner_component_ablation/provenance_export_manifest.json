@@ -1,0 +1,33 @@
+{
+  "campaign_name": "experiments_v39_planner_component_ablation_dev100",
+  "files": [
+    {
+      "exported_sha256": "b8a69098f48b4e48e440151604f5522fa745bd2319bfefde6a52a1c69dfa6561",
+      "original_sha256": "0f5e8433174d027aace8ea48d44119fb5db11ec882189a348f5ff77ae9a9946f",
+      "relative_path": "control/campaign_contract.json",
+      "source_root_replacements": 1
+    },
+    {
+      "exported_sha256": "876d6afe714b1cecc171cab9840291351477cf930dfdb12b92cb422698c93672",
+      "original_sha256": "876d6afe714b1cecc171cab9840291351477cf930dfdb12b92cb422698c93672",
+      "relative_path": "campaign_summary.json",
+      "source_root_replacements": 0
+    },
+    {
+      "exported_sha256": "505481915a388db253a070fdc725c1201c4eafd2147ad84206cc06969c1660ae",
+      "original_sha256": "505481915a388db253a070fdc725c1201c4eafd2147ad84206cc06969c1660ae",
+      "relative_path": "decision.json",
+      "source_root_replacements": 0
+    },
+    {
+      "exported_sha256": "c3b84790754c52d8b8ff0dbe11cf55ce65b141ea81a3daa5c46cfe2bd99757a1",
+      "original_sha256": "cba16b0f4aa5e18f817e7417ead1b6c4c66156c4ca25a5136f24bb52d4ff31d2",
+      "relative_path": "independent_audit.json",
+      "source_root_replacements": 1
+    }
+  ],
+  "only_transformation": "literal source-root path replacement",
+  "schema_version": 1,
+  "scientific_values_changed": false,
+  "source_root_token": "${FROZEN_SOURCE_ROOT}"
+}

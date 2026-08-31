@@ -1,0 +1,15 @@
+{
+  "component_decisions": {
+    "informed_selection": "MATERIAL_INFORMED_SELECTION_EFFECT",
+    "pair_term": "NO_MATERIAL_PAIR_TERM_EFFECT_DETECTED",
+    "retained_hypotheses": "NO_MATERIAL_RETAINED_HYPOTHESIS_EFFECT_DETECTED"
+  },
+  "decision": "V39_COMPLETE",
+  "development_only": true,
+  "full_arm_operational_gate": true,
+  "integrity_valid": true,
+  "reserved_final_range_untouched": [
+    49900,
+    50999
+  ]
+}

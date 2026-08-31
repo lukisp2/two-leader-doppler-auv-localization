@@ -1,0 +1,11 @@
+{
+  "decision": "V35_INVALID",
+  "development_only": true,
+  "integrity_valid": false,
+  "nominal_decision": "DO_NOT_SUPPORT_V24_NOMINAL",
+  "profile_switch_decision": "DO_NOT_RETAIN_PROFILED_SWITCH_FOR_MAIN_METHOD",
+  "reserved_final_range_untouched": [
+    49900,
+    50999
+  ]
+}

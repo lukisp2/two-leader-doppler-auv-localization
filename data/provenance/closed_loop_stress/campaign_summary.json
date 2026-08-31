@@ -1,0 +1,3784 @@
+{
+  "analysis_version": "v35_analysis_1.0",
+  "by_condition_arm": {
+    "broadcast_delay_2s@v24_nominal_model": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 93,
+      "episodes": 100,
+      "ever_lock_count": 100,
+      "maximum_combined_decision_runtime_s": 1.4875336249824613,
+      "mean_squared_action": {
+        "max": 0.42083557072376215,
+        "mean": 0.2741449042160962,
+        "median": 0.26561213930838445,
+        "p95": 0.362142824350962
+      },
+      "model_activation_count": 0,
+      "post300_unsafe_track_end_count": 0,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.9087999999999999,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 87,
+      "terminal_formation_error_m": {
+        "max": 201.25529763333796,
+        "mean": 5.767754545905119,
+        "median": 1.0282630757617661,
+        "p95": 2.7457049897171184
+      },
+      "terminal_localization_error_m": {
+        "max": 6.563460237331413,
+        "mean": 3.835499772526673,
+        "median": 3.759306721091133,
+        "p95": 5.6438130708414285
+      },
+      "terminal_success_count": 96,
+      "unsafe_track_end_count": 0,
+      "unsafe_track_start_count": 0,
+      "unsafe_transition_count": 0
+    },
+    "colored_noise_rho09_sd003@v24_nominal_model": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 90,
+      "episodes": 100,
+      "ever_lock_count": 99,
+      "maximum_combined_decision_runtime_s": 1.2094827080145478,
+      "mean_squared_action": {
+        "max": 0.44849624526055054,
+        "mean": 0.28376724843496487,
+        "median": 0.2772467942150046,
+        "p95": 0.367744492163265
+      },
+      "model_activation_count": 0,
+      "post300_unsafe_track_end_count": 0,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.8603999999999999,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 82,
+      "terminal_formation_error_m": {
+        "max": 1484.8986633958652,
+        "mean": 32.64456412286367,
+        "median": 0.8704890980061616,
+        "p95": 192.59286574444522
+      },
+      "terminal_localization_error_m": {
+        "max": 4.606624204277197,
+        "mean": 1.0090142237761586,
+        "median": 0.7951505143049691,
+        "p95": 2.7378808584130083
+      },
+      "terminal_success_count": 91,
+      "unsafe_track_end_count": 0,
+      "unsafe_track_start_count": 0,
+      "unsafe_transition_count": 0
+    },
+    "colored_noise_rho09_sd003@v35_bias_gate_300": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 90,
+      "episodes": 100,
+      "ever_lock_count": 99,
+      "maximum_combined_decision_runtime_s": 1.23745500005316,
+      "mean_squared_action": {
+        "max": 0.44849624526055054,
+        "mean": 0.28376724843496487,
+        "median": 0.2772467942150046,
+        "p95": 0.367744492163265
+      },
+      "model_activation_count": 0,
+      "post300_unsafe_track_end_count": 0,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.8603999999999999,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 82,
+      "terminal_formation_error_m": {
+        "max": 1484.8986633958652,
+        "mean": 32.64456412286367,
+        "median": 0.8704890980061616,
+        "p95": 192.59286574444522
+      },
+      "terminal_localization_error_m": {
+        "max": 4.606624204277197,
+        "mean": 1.0090142237761586,
+        "median": 0.7951505143049691,
+        "p95": 2.7378808584130083
+      },
+      "terminal_success_count": 91,
+      "unsafe_track_end_count": 0,
+      "unsafe_track_start_count": 0,
+      "unsafe_transition_count": 0
+    },
+    "dead_reckoning_scale_101@v24_nominal_model": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 63,
+      "episodes": 100,
+      "ever_lock_count": 100,
+      "maximum_combined_decision_runtime_s": 1.1357450420036912,
+      "mean_squared_action": {
+        "max": 0.5503711260791541,
+        "mean": 0.27847433300012264,
+        "median": 0.27364622357499324,
+        "p95": 0.382213456078339
+      },
+      "model_activation_count": 0,
+      "post300_unsafe_track_end_count": 618,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.708,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 64,
+      "terminal_formation_error_m": {
+        "max": 508.3529778193072,
+        "mean": 19.508425530339395,
+        "median": 6.06353643836944,
+        "p95": 74.28798431513746
+      },
+      "terminal_localization_error_m": {
+        "max": 11.381644081159981,
+        "mean": 5.533597038272536,
+        "median": 5.3377816190410465,
+        "p95": 8.671236554519473
+      },
+      "terminal_success_count": 67,
+      "unsafe_track_end_count": 761,
+      "unsafe_track_start_count": 744,
+      "unsafe_transition_count": 4
+    },
+    "doppler_common_bias_p003@v24_nominal_model": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 92,
+      "episodes": 100,
+      "ever_lock_count": 100,
+      "maximum_combined_decision_runtime_s": 1.0920903329970315,
+      "mean_squared_action": {
+        "max": 0.4384378453688206,
+        "mean": 0.2873106486882133,
+        "median": 0.28242140390356374,
+        "p95": 0.38323714701606953
+      },
+      "model_activation_count": 0,
+      "post300_unsafe_track_end_count": 36,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.8974000000000001,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 87,
+      "terminal_formation_error_m": {
+        "max": 147.40621882799792,
+        "mean": 6.609113693330951,
+        "median": 1.3311112285742999,
+        "p95": 8.506857176362812
+      },
+      "terminal_localization_error_m": {
+        "max": 7.7161211138800265,
+        "mean": 1.659120976574514,
+        "median": 1.0328303442032358,
+        "p95": 5.578211232613937
+      },
+      "terminal_success_count": 94,
+      "unsafe_track_end_count": 36,
+      "unsafe_track_start_count": 35,
+      "unsafe_transition_count": 0
+    },
+    "doppler_common_bias_p003@v35_bias_gate_300": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 93,
+      "episodes": 100,
+      "ever_lock_count": 100,
+      "maximum_combined_decision_runtime_s": 2.701692167087458,
+      "mean_squared_action": {
+        "max": 0.5375088443569025,
+        "mean": 0.30264474456610857,
+        "median": 0.29367292646298915,
+        "p95": 0.41067926085400647
+      },
+      "model_activation_count": 100,
+      "post300_unsafe_track_end_count": 0,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.9041999999999999,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 88,
+      "terminal_formation_error_m": {
+        "max": 147.77615658662188,
+        "mean": 5.635281157248312,
+        "median": 0.6191818561333198,
+        "p95": 7.739475139632686
+      },
+      "terminal_localization_error_m": {
+        "max": 2.0792621085286433,
+        "mean": 0.6162534822907483,
+        "median": 0.5437729843643443,
+        "p95": 1.2623082941140027
+      },
+      "terminal_success_count": 95,
+      "unsafe_track_end_count": 0,
+      "unsafe_track_start_count": 0,
+      "unsafe_transition_count": 0
+    },
+    "doppler_differential_bias_003@v24_nominal_model": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 79,
+      "episodes": 100,
+      "ever_lock_count": 100,
+      "maximum_combined_decision_runtime_s": 1.1470374999335036,
+      "mean_squared_action": {
+        "max": 0.46431656989760356,
+        "mean": 0.2889119607581374,
+        "median": 0.28169417503798966,
+        "p95": 0.39633313620073685
+      },
+      "model_activation_count": 0,
+      "post300_unsafe_track_end_count": 111,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.7781999999999999,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 74,
+      "terminal_formation_error_m": {
+        "max": 173.10098855778415,
+        "mean": 9.806606623703603,
+        "median": 1.561655431034615,
+        "p95": 71.27089222037415
+      },
+      "terminal_localization_error_m": {
+        "max": 8.774327387679225,
+        "mean": 1.6404115421930634,
+        "median": 1.0010849201084882,
+        "p95": 5.096291936790717
+      },
+      "terminal_success_count": 85,
+      "unsafe_track_end_count": 237,
+      "unsafe_track_start_count": 236,
+      "unsafe_transition_count": 1
+    },
+    "doppler_differential_bias_003@v35_bias_gate_300": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 82,
+      "episodes": 100,
+      "ever_lock_count": 100,
+      "maximum_combined_decision_runtime_s": 2.4740414160769433,
+      "mean_squared_action": {
+        "max": 0.4753697933619852,
+        "mean": 0.3012291853767171,
+        "median": 0.2941378714906475,
+        "p95": 0.39799360839108905
+      },
+      "model_activation_count": 100,
+      "post300_unsafe_track_end_count": 0,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.7946000000000001,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 75,
+      "terminal_formation_error_m": {
+        "max": 172.7705991878545,
+        "mean": 8.985387297461267,
+        "median": 0.6865654754855813,
+        "p95": 71.22861513328488
+      },
+      "terminal_localization_error_m": {
+        "max": 2.4122202736679323,
+        "mean": 0.6258497929631676,
+        "median": 0.5012027745398357,
+        "p95": 1.4347932373016932
+      },
+      "terminal_success_count": 87,
+      "unsafe_track_end_count": 126,
+      "unsafe_track_start_count": 126,
+      "unsafe_transition_count": 1
+    },
+    "doppler_scale_102@v24_nominal_model": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 51,
+      "episodes": 100,
+      "ever_lock_count": 59,
+      "maximum_combined_decision_runtime_s": 1.1611152909463271,
+      "mean_squared_action": {
+        "max": 0.41620898461071126,
+        "mean": 0.2499953156413413,
+        "median": 0.2527416483273548,
+        "p95": 0.35868611529564043
+      },
+      "model_activation_count": 0,
+      "post300_unsafe_track_end_count": 252,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.5054,
+        "median": 0.6799999999999999,
+        "p95": 1.0
+      },
+      "tail80_success_count": 50,
+      "terminal_formation_error_m": {
+        "max": 2632.68560424615,
+        "mean": 688.9772491841726,
+        "median": 4.249116440445164,
+        "p95": 2130.9521854665145
+      },
+      "terminal_localization_error_m": {
+        "max": 20.871481927578003,
+        "mean": 2.6841269410934463,
+        "median": 1.9656684439591303,
+        "p95": 7.75970724163501
+      },
+      "terminal_success_count": 53,
+      "unsafe_track_end_count": 569,
+      "unsafe_track_start_count": 573,
+      "unsafe_transition_count": 7
+    },
+    "dropout_iid10@v24_nominal_model": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 98,
+      "episodes": 100,
+      "ever_lock_count": 100,
+      "maximum_combined_decision_runtime_s": 0.9872799579752609,
+      "mean_squared_action": {
+        "max": 0.44434139933090744,
+        "mean": 0.27591308463643144,
+        "median": 0.2699788461074882,
+        "p95": 0.38590394192182775
+      },
+      "model_activation_count": 0,
+      "post300_unsafe_track_end_count": 0,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.9702000000000001,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 95,
+      "terminal_formation_error_m": {
+        "max": 87.31629656743435,
+        "mean": 1.5621676216622336,
+        "median": 0.6145880228657661,
+        "p95": 1.5688807711398431
+      },
+      "terminal_localization_error_m": {
+        "max": 3.213288089214227,
+        "mean": 0.6877970235642272,
+        "median": 0.6011692638068765,
+        "p95": 1.6441944007503906
+      },
+      "terminal_success_count": 99,
+      "unsafe_track_end_count": 0,
+      "unsafe_track_start_count": 0,
+      "unsafe_transition_count": 0
+    },
+    "nominal@v24_nominal_model": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 97,
+      "episodes": 100,
+      "ever_lock_count": 100,
+      "maximum_combined_decision_runtime_s": 1.4241939999628812,
+      "mean_squared_action": {
+        "max": 0.4374095250867905,
+        "mean": 0.2687263819289852,
+        "median": 0.25994579691928943,
+        "p95": 0.3556854608824941
+      },
+      "model_activation_count": 0,
+      "post300_unsafe_track_end_count": 0,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.9664,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 96,
+      "terminal_formation_error_m": {
+        "max": 165.9643505076388,
+        "mean": 4.05590233781934,
+        "median": 0.6081988485781722,
+        "p95": 1.8167634880301005
+      },
+      "terminal_localization_error_m": {
+        "max": 1.9897199375964874,
+        "mean": 0.6624758497607393,
+        "median": 0.5992564594836417,
+        "p95": 1.4953462194754934
+      },
+      "terminal_success_count": 97,
+      "unsafe_track_end_count": 0,
+      "unsafe_track_start_count": 0,
+      "unsafe_transition_count": 0
+    },
+    "nominal@v35_bias_gate_300": {
+      "audit_release_violation_count": 0,
+      "dwell15_success_count": 97,
+      "episodes": 100,
+      "ever_lock_count": 100,
+      "maximum_combined_decision_runtime_s": 1.2315961250569671,
+      "mean_squared_action": {
+        "max": 0.4374095250867905,
+        "mean": 0.2687263819289852,
+        "median": 0.25994579691928943,
+        "p95": 0.3556854608824941
+      },
+      "model_activation_count": 0,
+      "post300_unsafe_track_end_count": 0,
+      "tail50_joint_occupancy": {
+        "max": 1.0,
+        "mean": 0.9664,
+        "median": 1.0,
+        "p95": 1.0
+      },
+      "tail80_success_count": 96,
+      "terminal_formation_error_m": {
+        "max": 165.9643505076388,
+        "mean": 4.05590233781934,
+        "median": 0.6081988485781722,
+        "p95": 1.8167634880301005
+      },
+      "terminal_localization_error_m": {
+        "max": 1.9897199375964874,
+        "mean": 0.6624758497607393,
+        "median": 0.5992564594836417,
+        "p95": 1.4953462194754934
+      },
+      "terminal_success_count": 97,
+      "unsafe_track_end_count": 0,
+      "unsafe_track_start_count": 0,
+      "unsafe_transition_count": 0
+    }
+  },
+  "decision": "V35_INVALID",
+  "development_only": true,
+  "elapsed_wall_s": 9249.05376099993,
+  "expected_row_count": 1200,
+  "integrity_checks": {
+    "all_fixed_horizon": true,
+    "all_runs_complete": true,
+    "audit_release_violations_zero": true,
+    "fresh_seed_audit_pass": true,
+    "maximum_runtime_below_2s": false,
+    "pairing_complete": true,
+    "reserved_final_untouched": true
+  },
+  "integrity_valid": false,
+  "nominal_decision": "DO_NOT_SUPPORT_V24_NOMINAL",
+  "profile_paired_effects": {
+    "colored_noise_rho09_sd003": {
+      "tail80_discordance": {
+        "primary_only": 0,
+        "treatment_only": 0
+      },
+      "terminal_discordance": {
+        "primary_only": 0,
+        "treatment_only": 0
+      },
+      "terminal_localization_improvement_m": {
+        "bootstrap_mean_95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "median": 0.0,
+        "pairs": 100,
+        "replicates": 50000,
+        "seed": 35048103
+      }
+    },
+    "doppler_common_bias_p003": {
+      "tail80_discordance": {
+        "primary_only": 0,
+        "treatment_only": 1
+      },
+      "terminal_discordance": {
+        "primary_only": 0,
+        "treatment_only": 1
+      },
+      "terminal_localization_improvement_m": {
+        "bootstrap_mean_95": [
+          0.7610590791321772,
+          1.35655633430776
+        ],
+        "mean": 1.0428674942837657,
+        "median": 0.47564719750668494,
+        "pairs": 100,
+        "replicates": 50000,
+        "seed": 35048101
+      }
+    },
+    "doppler_differential_bias_003": {
+      "tail80_discordance": {
+        "primary_only": 1,
+        "treatment_only": 2
+      },
+      "terminal_discordance": {
+        "primary_only": 0,
+        "treatment_only": 2
+      },
+      "terminal_localization_improvement_m": {
+        "bootstrap_mean_95": [
+          0.7279623474959594,
+          1.3388532478702562
+        ],
+        "mean": 1.0145617492298964,
+        "median": 0.32747902088943603,
+        "pairs": 100,
+        "replicates": 50000,
+        "seed": 35048102
+      }
+    },
+    "nominal": {
+      "tail80_discordance": {
+        "primary_only": 0,
+        "treatment_only": 0
+      },
+      "terminal_discordance": {
+        "primary_only": 0,
+        "treatment_only": 0
+      },
+      "terminal_localization_improvement_m": {
+        "bootstrap_mean_95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "median": 0.0,
+        "pairs": 100,
+        "replicates": 50000,
+        "seed": 35048100
+      }
+    }
+  },
+  "profile_switch_decision": "DO_NOT_RETAIN_PROFILED_SWITCH_FOR_MAIN_METHOD",
+  "reserved_final_range_untouched": [
+    49900,
+    50999
+  ],
+  "row_count": 1200,
+  "runner_version": "v35_closed_loop_stress_runner_1.0",
+  "schema_version": 1,
+  "smoke": false,
+  "status": "complete",
+  "stress_family_decisions": {
+    "broadcast_delay_2s": "SUPPORTED_STRESS_FAMILY",
+    "colored_noise_rho09_sd003": "UNSUPPORTED_STRESS_FAMILY",
+    "dead_reckoning_scale_101": "UNSUPPORTED_STRESS_FAMILY",
+    "doppler_common_bias_p003": "UNSUPPORTED_STRESS_FAMILY",
+    "doppler_differential_bias_003": "UNSUPPORTED_STRESS_FAMILY",
+    "doppler_scale_102": "UNSUPPORTED_STRESS_FAMILY",
+    "dropout_iid10": "SUPPORTED_STRESS_FAMILY",
+    "nominal": "SUPPORTED_STRESS_FAMILY"
+  },
+  "treatment_pairing": [
+    {
+      "condition": "nominal",
+      "episode_index": 0,
+      "episode_seed": 48100,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 0,
+      "episode_seed": 48100,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 0,
+      "episode_seed": 48100,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 0,
+      "episode_seed": 48100,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 1,
+      "episode_seed": 48101,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 1,
+      "episode_seed": 48101,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 1,
+      "episode_seed": 48101,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 1,
+      "episode_seed": 48101,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 2,
+      "episode_seed": 48102,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 2,
+      "episode_seed": 48102,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 2,
+      "episode_seed": 48102,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 2,
+      "episode_seed": 48102,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 3,
+      "episode_seed": 48103,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 3,
+      "episode_seed": 48103,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 3,
+      "episode_seed": 48103,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 3,
+      "episode_seed": 48103,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 4,
+      "episode_seed": 48104,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 4,
+      "episode_seed": 48104,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 4,
+      "episode_seed": 48104,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 4,
+      "episode_seed": 48104,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 5,
+      "episode_seed": 48105,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 5,
+      "episode_seed": 48105,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 5,
+      "episode_seed": 48105,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 5,
+      "episode_seed": 48105,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 6,
+      "episode_seed": 48106,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 6,
+      "episode_seed": 48106,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 6,
+      "episode_seed": 48106,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 6,
+      "episode_seed": 48106,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 7,
+      "episode_seed": 48107,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 7,
+      "episode_seed": 48107,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 7,
+      "episode_seed": 48107,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 7,
+      "episode_seed": 48107,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 8,
+      "episode_seed": 48108,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 8,
+      "episode_seed": 48108,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 8,
+      "episode_seed": 48108,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 8,
+      "episode_seed": 48108,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 9,
+      "episode_seed": 48109,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 9,
+      "episode_seed": 48109,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 9,
+      "episode_seed": 48109,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 9,
+      "episode_seed": 48109,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 10,
+      "episode_seed": 48110,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 10,
+      "episode_seed": 48110,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 10,
+      "episode_seed": 48110,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 10,
+      "episode_seed": 48110,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 11,
+      "episode_seed": 48111,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 11,
+      "episode_seed": 48111,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 11,
+      "episode_seed": 48111,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 11,
+      "episode_seed": 48111,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 12,
+      "episode_seed": 48112,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 12,
+      "episode_seed": 48112,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 12,
+      "episode_seed": 48112,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 12,
+      "episode_seed": 48112,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 13,
+      "episode_seed": 48113,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 13,
+      "episode_seed": 48113,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 13,
+      "episode_seed": 48113,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 13,
+      "episode_seed": 48113,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 14,
+      "episode_seed": 48114,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 14,
+      "episode_seed": 48114,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 14,
+      "episode_seed": 48114,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 14,
+      "episode_seed": 48114,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 15,
+      "episode_seed": 48115,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 15,
+      "episode_seed": 48115,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 15,
+      "episode_seed": 48115,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 15,
+      "episode_seed": 48115,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 16,
+      "episode_seed": 48116,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 16,
+      "episode_seed": 48116,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 16,
+      "episode_seed": 48116,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 16,
+      "episode_seed": 48116,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 17,
+      "episode_seed": 48117,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 17,
+      "episode_seed": 48117,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 17,
+      "episode_seed": 48117,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 17,
+      "episode_seed": 48117,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 18,
+      "episode_seed": 48118,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 18,
+      "episode_seed": 48118,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 18,
+      "episode_seed": 48118,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 18,
+      "episode_seed": 48118,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 19,
+      "episode_seed": 48119,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 19,
+      "episode_seed": 48119,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 19,
+      "episode_seed": 48119,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 19,
+      "episode_seed": 48119,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 20,
+      "episode_seed": 48120,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 20,
+      "episode_seed": 48120,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 20,
+      "episode_seed": 48120,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 20,
+      "episode_seed": 48120,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 21,
+      "episode_seed": 48121,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 21,
+      "episode_seed": 48121,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 21,
+      "episode_seed": 48121,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 21,
+      "episode_seed": 48121,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 22,
+      "episode_seed": 48122,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 22,
+      "episode_seed": 48122,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 22,
+      "episode_seed": 48122,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 22,
+      "episode_seed": 48122,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 23,
+      "episode_seed": 48123,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 23,
+      "episode_seed": 48123,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 23,
+      "episode_seed": 48123,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 23,
+      "episode_seed": 48123,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 24,
+      "episode_seed": 48124,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 24,
+      "episode_seed": 48124,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 24,
+      "episode_seed": 48124,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 24,
+      "episode_seed": 48124,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 25,
+      "episode_seed": 48125,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 25,
+      "episode_seed": 48125,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 25,
+      "episode_seed": 48125,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 25,
+      "episode_seed": 48125,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 26,
+      "episode_seed": 48126,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 26,
+      "episode_seed": 48126,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 26,
+      "episode_seed": 48126,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 26,
+      "episode_seed": 48126,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 27,
+      "episode_seed": 48127,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 27,
+      "episode_seed": 48127,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 27,
+      "episode_seed": 48127,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 27,
+      "episode_seed": 48127,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 28,
+      "episode_seed": 48128,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 28,
+      "episode_seed": 48128,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 28,
+      "episode_seed": 48128,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 28,
+      "episode_seed": 48128,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 29,
+      "episode_seed": 48129,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 29,
+      "episode_seed": 48129,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 29,
+      "episode_seed": 48129,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 29,
+      "episode_seed": 48129,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 30,
+      "episode_seed": 48130,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 30,
+      "episode_seed": 48130,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 30,
+      "episode_seed": 48130,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 30,
+      "episode_seed": 48130,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 31,
+      "episode_seed": 48131,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 31,
+      "episode_seed": 48131,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 31,
+      "episode_seed": 48131,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 31,
+      "episode_seed": 48131,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 32,
+      "episode_seed": 48132,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 32,
+      "episode_seed": 48132,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 32,
+      "episode_seed": 48132,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 32,
+      "episode_seed": 48132,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 33,
+      "episode_seed": 48133,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 33,
+      "episode_seed": 48133,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 33,
+      "episode_seed": 48133,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 33,
+      "episode_seed": 48133,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 34,
+      "episode_seed": 48134,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 34,
+      "episode_seed": 48134,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 34,
+      "episode_seed": 48134,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 34,
+      "episode_seed": 48134,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 35,
+      "episode_seed": 48135,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 35,
+      "episode_seed": 48135,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 35,
+      "episode_seed": 48135,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 35,
+      "episode_seed": 48135,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 36,
+      "episode_seed": 48136,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 36,
+      "episode_seed": 48136,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 36,
+      "episode_seed": 48136,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 36,
+      "episode_seed": 48136,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 37,
+      "episode_seed": 48137,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 37,
+      "episode_seed": 48137,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 37,
+      "episode_seed": 48137,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 37,
+      "episode_seed": 48137,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 38,
+      "episode_seed": 48138,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 38,
+      "episode_seed": 48138,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 38,
+      "episode_seed": 48138,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 38,
+      "episode_seed": 48138,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 39,
+      "episode_seed": 48139,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 39,
+      "episode_seed": 48139,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 39,
+      "episode_seed": 48139,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 39,
+      "episode_seed": 48139,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 40,
+      "episode_seed": 48140,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 40,
+      "episode_seed": 48140,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 40,
+      "episode_seed": 48140,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 40,
+      "episode_seed": 48140,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 41,
+      "episode_seed": 48141,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 41,
+      "episode_seed": 48141,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 41,
+      "episode_seed": 48141,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 41,
+      "episode_seed": 48141,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 42,
+      "episode_seed": 48142,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 42,
+      "episode_seed": 48142,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 42,
+      "episode_seed": 48142,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 42,
+      "episode_seed": 48142,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 43,
+      "episode_seed": 48143,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 43,
+      "episode_seed": 48143,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 43,
+      "episode_seed": 48143,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 43,
+      "episode_seed": 48143,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 44,
+      "episode_seed": 48144,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 44,
+      "episode_seed": 48144,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 44,
+      "episode_seed": 48144,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 44,
+      "episode_seed": 48144,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 45,
+      "episode_seed": 48145,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 45,
+      "episode_seed": 48145,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 45,
+      "episode_seed": 48145,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 45,
+      "episode_seed": 48145,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 46,
+      "episode_seed": 48146,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 46,
+      "episode_seed": 48146,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 46,
+      "episode_seed": 48146,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 46,
+      "episode_seed": 48146,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 47,
+      "episode_seed": 48147,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 47,
+      "episode_seed": 48147,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 47,
+      "episode_seed": 48147,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 47,
+      "episode_seed": 48147,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 48,
+      "episode_seed": 48148,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 48,
+      "episode_seed": 48148,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 48,
+      "episode_seed": 48148,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 48,
+      "episode_seed": 48148,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 49,
+      "episode_seed": 48149,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 49,
+      "episode_seed": 48149,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 49,
+      "episode_seed": 48149,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 49,
+      "episode_seed": 48149,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 50,
+      "episode_seed": 48150,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 50,
+      "episode_seed": 48150,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 50,
+      "episode_seed": 48150,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 50,
+      "episode_seed": 48150,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 51,
+      "episode_seed": 48151,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 51,
+      "episode_seed": 48151,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 51,
+      "episode_seed": 48151,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 51,
+      "episode_seed": 48151,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 52,
+      "episode_seed": 48152,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 52,
+      "episode_seed": 48152,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 52,
+      "episode_seed": 48152,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 52,
+      "episode_seed": 48152,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 53,
+      "episode_seed": 48153,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 53,
+      "episode_seed": 48153,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 53,
+      "episode_seed": 48153,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 53,
+      "episode_seed": 48153,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 54,
+      "episode_seed": 48154,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 54,
+      "episode_seed": 48154,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 54,
+      "episode_seed": 48154,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 54,
+      "episode_seed": 48154,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 55,
+      "episode_seed": 48155,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 55,
+      "episode_seed": 48155,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 55,
+      "episode_seed": 48155,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 55,
+      "episode_seed": 48155,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 56,
+      "episode_seed": 48156,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 56,
+      "episode_seed": 48156,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 56,
+      "episode_seed": 48156,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 56,
+      "episode_seed": 48156,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 57,
+      "episode_seed": 48157,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 57,
+      "episode_seed": 48157,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 57,
+      "episode_seed": 48157,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 57,
+      "episode_seed": 48157,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 58,
+      "episode_seed": 48158,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 58,
+      "episode_seed": 48158,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 58,
+      "episode_seed": 48158,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 58,
+      "episode_seed": 48158,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 59,
+      "episode_seed": 48159,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 59,
+      "episode_seed": 48159,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 59,
+      "episode_seed": 48159,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 59,
+      "episode_seed": 48159,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 60,
+      "episode_seed": 48160,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 60,
+      "episode_seed": 48160,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 60,
+      "episode_seed": 48160,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 60,
+      "episode_seed": 48160,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 61,
+      "episode_seed": 48161,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 61,
+      "episode_seed": 48161,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 61,
+      "episode_seed": 48161,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 61,
+      "episode_seed": 48161,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 62,
+      "episode_seed": 48162,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 62,
+      "episode_seed": 48162,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 62,
+      "episode_seed": 48162,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 62,
+      "episode_seed": 48162,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 63,
+      "episode_seed": 48163,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 63,
+      "episode_seed": 48163,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 63,
+      "episode_seed": 48163,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 63,
+      "episode_seed": 48163,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 64,
+      "episode_seed": 48164,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 64,
+      "episode_seed": 48164,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 64,
+      "episode_seed": 48164,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 64,
+      "episode_seed": 48164,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 65,
+      "episode_seed": 48165,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 65,
+      "episode_seed": 48165,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 65,
+      "episode_seed": 48165,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 65,
+      "episode_seed": 48165,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 66,
+      "episode_seed": 48166,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 66,
+      "episode_seed": 48166,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 66,
+      "episode_seed": 48166,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 66,
+      "episode_seed": 48166,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 67,
+      "episode_seed": 48167,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 67,
+      "episode_seed": 48167,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 67,
+      "episode_seed": 48167,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 67,
+      "episode_seed": 48167,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 68,
+      "episode_seed": 48168,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 68,
+      "episode_seed": 48168,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 68,
+      "episode_seed": 48168,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 68,
+      "episode_seed": 48168,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 69,
+      "episode_seed": 48169,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 69,
+      "episode_seed": 48169,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 69,
+      "episode_seed": 48169,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 69,
+      "episode_seed": 48169,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 70,
+      "episode_seed": 48170,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 70,
+      "episode_seed": 48170,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 70,
+      "episode_seed": 48170,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 70,
+      "episode_seed": 48170,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 71,
+      "episode_seed": 48171,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 71,
+      "episode_seed": 48171,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 71,
+      "episode_seed": 48171,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 71,
+      "episode_seed": 48171,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 72,
+      "episode_seed": 48172,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 72,
+      "episode_seed": 48172,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 72,
+      "episode_seed": 48172,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 72,
+      "episode_seed": 48172,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 73,
+      "episode_seed": 48173,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 73,
+      "episode_seed": 48173,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 73,
+      "episode_seed": 48173,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 73,
+      "episode_seed": 48173,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 74,
+      "episode_seed": 48174,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 74,
+      "episode_seed": 48174,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 74,
+      "episode_seed": 48174,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 74,
+      "episode_seed": 48174,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 75,
+      "episode_seed": 48175,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 75,
+      "episode_seed": 48175,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 75,
+      "episode_seed": 48175,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 75,
+      "episode_seed": 48175,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 76,
+      "episode_seed": 48176,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 76,
+      "episode_seed": 48176,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 76,
+      "episode_seed": 48176,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 76,
+      "episode_seed": 48176,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 77,
+      "episode_seed": 48177,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 77,
+      "episode_seed": 48177,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 77,
+      "episode_seed": 48177,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 77,
+      "episode_seed": 48177,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 78,
+      "episode_seed": 48178,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 78,
+      "episode_seed": 48178,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 78,
+      "episode_seed": 48178,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 78,
+      "episode_seed": 48178,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 79,
+      "episode_seed": 48179,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 79,
+      "episode_seed": 48179,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 79,
+      "episode_seed": 48179,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 79,
+      "episode_seed": 48179,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 80,
+      "episode_seed": 48180,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 80,
+      "episode_seed": 48180,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 80,
+      "episode_seed": 48180,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 80,
+      "episode_seed": 48180,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 81,
+      "episode_seed": 48181,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 81,
+      "episode_seed": 48181,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 81,
+      "episode_seed": 48181,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 81,
+      "episode_seed": 48181,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 82,
+      "episode_seed": 48182,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 82,
+      "episode_seed": 48182,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 82,
+      "episode_seed": 48182,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 82,
+      "episode_seed": 48182,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 83,
+      "episode_seed": 48183,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 83,
+      "episode_seed": 48183,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 83,
+      "episode_seed": 48183,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 83,
+      "episode_seed": 48183,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 84,
+      "episode_seed": 48184,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 84,
+      "episode_seed": 48184,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 84,
+      "episode_seed": 48184,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 84,
+      "episode_seed": 48184,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 85,
+      "episode_seed": 48185,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 85,
+      "episode_seed": 48185,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 85,
+      "episode_seed": 48185,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 85,
+      "episode_seed": 48185,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 86,
+      "episode_seed": 48186,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 86,
+      "episode_seed": 48186,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 86,
+      "episode_seed": 48186,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 86,
+      "episode_seed": 48186,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 87,
+      "episode_seed": 48187,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 87,
+      "episode_seed": 48187,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 87,
+      "episode_seed": 48187,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 87,
+      "episode_seed": 48187,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 88,
+      "episode_seed": 48188,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 88,
+      "episode_seed": 48188,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 88,
+      "episode_seed": 48188,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 88,
+      "episode_seed": 48188,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 89,
+      "episode_seed": 48189,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 89,
+      "episode_seed": 48189,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 89,
+      "episode_seed": 48189,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 89,
+      "episode_seed": 48189,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 90,
+      "episode_seed": 48190,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 90,
+      "episode_seed": 48190,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 90,
+      "episode_seed": 48190,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 90,
+      "episode_seed": 48190,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 91,
+      "episode_seed": 48191,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 91,
+      "episode_seed": 48191,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 91,
+      "episode_seed": 48191,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 91,
+      "episode_seed": 48191,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 92,
+      "episode_seed": 48192,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 92,
+      "episode_seed": 48192,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 92,
+      "episode_seed": 48192,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 92,
+      "episode_seed": 48192,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 93,
+      "episode_seed": 48193,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 93,
+      "episode_seed": 48193,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 93,
+      "episode_seed": 48193,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 93,
+      "episode_seed": 48193,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 94,
+      "episode_seed": 48194,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 94,
+      "episode_seed": 48194,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 94,
+      "episode_seed": 48194,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 94,
+      "episode_seed": 48194,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 95,
+      "episode_seed": 48195,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 95,
+      "episode_seed": 48195,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 95,
+      "episode_seed": 48195,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 95,
+      "episode_seed": 48195,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 96,
+      "episode_seed": 48196,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 96,
+      "episode_seed": 48196,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 96,
+      "episode_seed": 48196,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 96,
+      "episode_seed": 48196,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 97,
+      "episode_seed": 48197,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 97,
+      "episode_seed": 48197,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 97,
+      "episode_seed": 48197,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 97,
+      "episode_seed": 48197,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 98,
+      "episode_seed": 48198,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 98,
+      "episode_seed": 48198,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 98,
+      "episode_seed": 48198,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 98,
+      "episode_seed": 48198,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "nominal",
+      "episode_index": 99,
+      "episode_seed": 48199,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_common_bias_p003",
+      "episode_index": 99,
+      "episode_seed": 48199,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "doppler_differential_bias_003",
+      "episode_index": 99,
+      "episode_seed": 48199,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": true,
+      "verified_field_count": 13
+    },
+    {
+      "condition": "colored_noise_rho09_sd003",
+      "episode_index": 99,
+      "episode_seed": 48199,
+      "paired_through_time_s": 300.0,
+      "treatment_activated": false,
+      "verified_field_count": 13
+    }
+  ]
+}

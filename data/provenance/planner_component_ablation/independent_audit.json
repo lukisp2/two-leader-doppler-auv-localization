@@ -1,0 +1,634 @@
+{
+  "audit_release_violation_count": 0,
+  "auditor_version": "v39_independent_causal_auditor_1.0",
+  "campaign": "${FROZEN_SOURCE_ROOT}/experiments_v39_planner_component_ablation_dev100",
+  "component_decisions": {
+    "informed_selection": "MATERIAL_INFORMED_SELECTION_EFFECT",
+    "pair_term": "NO_MATERIAL_PAIR_TERM_EFFECT_DETECTED",
+    "retained_hypotheses": "NO_MATERIAL_RETAINED_HYPOTHESIS_EFFECT_DETECTED"
+  },
+  "decision": "V39_COMPLETE",
+  "expected_row_count": 400,
+  "integrity_checks": {
+    "all_four_arms_paired": true,
+    "all_runs_complete": true,
+    "audit_release_violations_zero": true,
+    "fresh_seed_audit_pass": true,
+    "maximum_runtime_below_2s": true,
+    "publication_settings": true,
+    "reserved_final_untouched": true,
+    "source_snapshot_valid": true
+  },
+  "issue_count": 0,
+  "issues": [],
+  "maximum_combined_decision_runtime_s": 1.5775514169945382,
+  "pair_audits": [
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48800,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "2316aeed0867d67d8b8315586fa87769aefb7a123cfc5aedf09cfe25bc915e77"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48801,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "ee6459c23c21735818a985c753505b92dc39967a01f0da3c7e1138cce2f106db"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48802,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "0c32748bbf2e3759e754e757e67b8277b4f031b770a3d676d21b48ff867316e1"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48803,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "14075a30b61900eb206ea6030c9f6aeb1474fbdc3a16f8b445ebd6e463af577a"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48804,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "a4cacdf9e0cf15c0f9930e416419d6772f0137969519f597a1b3b11c0fb4fb5c"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48805,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "88f3d6e41b529f405e0a571847f2976db2797cd61980c84ca5088775f010970b"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48806,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "df31efc985415072e647f8d8da1e73274f687ca7ec98bf68da4728f3a3003090"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48807,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "d75f6f66b769e4a1ab8bcb5000d770405de2abb176bba6c2330f3c4c48f6f119"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48808,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "357a91eaa56cc4edacdc16354dc9166f09a531e78b35f1f2615ecfde7f560a2f"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48809,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "3ff9d9818c2777233df15a01fae07749c211840ce11995f59ca48d20f997b8be"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48810,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "fabae863002672bfd099a582497f7493d236c8df2a0bd07df39ca44220e004ce"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48811,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "87d65855b349598ba8f9eb890e6963da2f1643fa7aaddde4dcea0356ca74f590"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48812,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "b10b5e9f92baad4986f7d893cd947daad5186422903bc9dfc3bd8e623d33d5c8"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48813,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "d398cc7b392f97f899b04745c9d2b8ac6b4a475905c5b4358cb66368404b39f8"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48814,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "9eae6310502fd480d950280c36db9e76eea10600879ffced39b7b89c6a93a311"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48815,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "11ffbfda8ce8c75256054eb47b89697f0e556ce5d41c7a893fe44b7833b308e3"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48816,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "55212dd3e9a31771f975022b593efd7b80634cf78a5715a8bb564899a02f6de5"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48817,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "4d07b797907f7bba1ca48df2df021af92f4b4f793a3eb8624047cb4ba0319609"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48818,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "9dff5ee30f3113c39de292796a43d6136204a48ed4ac2d905d685d03fe6f8c3a"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48819,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "d7d2aeca0137b8fd62f61265b211b4dd07c5f71065aa7a98f2e1de4ad1212b97"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48820,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "47b0c31e5d838150af9eb3857db093169d78d33999832064e8e256f9d77dfb67"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48821,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "45862155dd2d9cd96112dbe19ea487f120b54b556c870aa4f5637f0717772aa9"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48822,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "6bc34ebebceb0689b860e905d8766dbcc3475855cae46a0e090c7000b6901656"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48823,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "dec77e78c66df8a7bc06d87975d0ffce2df9e4bbaca86ad1379ba5444021f922"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48824,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "fe125d1c9a9eccc53026d2525622f62eafc2e08fdb151694a359e221a5ea100b"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48825,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "27df31183fbe1c7b6760a935955607f78b446d2ff984b631522a094186f8db9c"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48826,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "65f6df7a75d7c424c33ffc68c954f9798fc6a4bbc58e6f13513ac8651b1a8771"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48827,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "7c17f22a93f2ed52db07a6a87cd198e2260e3c6503762685324fc22174a87197"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48828,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "481dea2dadd4763c8f746872fd0fb1be960f13c022429f6a6df7629cb131359e"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48829,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "7eca58a02db489ff442f2d5b888ce1ee8274b6170e7f555b9599e9a94b3b3c84"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48830,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "434aaf9d355efedb04a3b8fe684c8a8c4ea5bf0c1ba26502a1d2e60bff50010a"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48831,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "b6b3ac0cebb8b6946c402ad65e8fb46b967ce7ffbba3525496baf72c825a1d2c"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48832,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "f15c652e99359318314b69c282062ebad3a3e0e0dfb7058e1744f226d7c86b3d"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48833,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "6a3af6417463784a2bb97af158bb9f7da11dc2e6a1b8e3c7d2522ed7243329e2"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48834,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "ad204ee95202e3ea4204f19d4191b2b537d903cc4194265447da0d69d50a71fe"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48835,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "a5442ac5b18814f7328a68ec637513eafc90d03af2fb486dc74306fb3fb4eff0"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48836,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "64e941c2583d204d43259d7b438cd75e42917ac4a00e977a201550cb25315b7d"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48837,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "5a0aa7af3db3407fe1f0b0263c360fb14b9e351f588107091d520da4cc14ebaa"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48838,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "0f19b848036389a93744448a7bfd1a8abe1a8163a13750295e136c4503fa42c4"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48839,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "464ecd520d04597517fcb553f57b3cb6ae33e6d2be8a915955ca6d3565d59b49"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48840,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "3d38a589dc95d19221fc751a2e46862dfb3c7c1fc1b185898be66f3e5732b351"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48841,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "cdf633cb7c2d806dd8e6fae280882de837311ed33badeabfcff94988bff4d373"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48842,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "8e04ce8eefeead03fdfea0f4ad95aec49ef1e3a5c7a4e21874e9d8b1d97a273e"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48843,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "afcf8daee7cf9dad83dc28b8a43d410235767330684d20522f969888281dd1a7"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48844,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "9655d26631b7c15361c0e0bfdb9a6d029031d14c565e42ea681db6ef6a5a57bf"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48845,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "18744ced8b028ad592f2a73e23e18d9af64c4126ffe6705954ebd00f9021dc68"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48846,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "997a4a54b1b6fd711ed8cbaf48d20b2902e7f91f5c0f7f4e030812d3eb752a45"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48847,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "8b0ffffcf70653c66ce80bd1dad72bd517567828931ea07845a3ac41a118ce12"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48848,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "97795c17f1b232ce31089962cead61435aa1f7034bbad8025a2185b531a1e031"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48849,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "44cc47777a36eeec33dac7f537d39fd5882572ac6c7254d2fed48025921ada74"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48850,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "fd47a7b5de73b7004323556b824a872c1ac0556871344ace69bf107cf0612a06"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48851,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "3e955cc9236715d4fab056c088bc3a7d1379e121d3af1fb3af27dad2f1d51840"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48852,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "028ff4eaa70bd4ef1fb0d44ba8faceea0749423cc2678bcb87d9f1db778e0b29"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48853,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "a421f79452aa2048e22a121e726484f86dedf9ffceda37a1d1050ab19f7f0d0b"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48854,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "b982295d75a114a7447c406ae7355c265a278b0ba4cd23985be40867d58f2da9"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48855,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "a4996c36b036ea285195fb4cdd9db8ab7d757be96b43ba6ddff6fc613d226bfb"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48856,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "fead1b9fcf6e5f85b75248b89349edfd60a1e318c56194e079e22ab18ddcff00"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48857,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "f1ac7a9fa5e8e0f4d8711e9f4a8fb8a90a5a59f3026cdbbc699337a996814931"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48858,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "a9d63fe47e0ee40ae22cba4cc20695cd91827ac1208a83ff0ec95d49579fb51e"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48859,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "81f4fe68beea4cfb5d56c5e419c13bfec2c82b06028efbfcef47947806665fc9"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48860,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "c491167771e24bacb90e681b55ffbb0ae94d09d917551ff0d6edfe7343e03b51"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48861,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "02370ad7c15bdddf8d3152bdd2929620768e5936075f985a69081689d88beba2"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48862,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "bf00dfc7c103cca6d8919687049ba0c4f325d978f06cb7868d4268489529dc76"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48863,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "6cf55433ca5f024ba2034aa571c5e4ed0b4023fe07acf1ab23a22844416fdd07"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48864,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "6075693cf8fc9ab7673b5c8b63a2b836dd7c34ceb9be2e25ea46b0401981e39b"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48865,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "f8691e104506a082ad7f0a540fb720c4ca60f3788254dd3d7dbd7e8063a6b0aa"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48866,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "44f4b748fbee11613d81abdc3c4b29dc0e3e3f713094933e411507d0f33c2309"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48867,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "7cf4879f3549a380fb3fe336ca4ae1ee1ccb4051493ffe71645fddd223abfe00"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48868,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "80df2eb7b9646e1638fe893e916fc45ae1058f17bae5fe2e8303c03a741c0b8e"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48869,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "02e520481107efffeef5c02b5a30565ca813060afdab7478cddf8fe8649ed162"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48870,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "cb0adcaae790af7dbfb1ec87ce590c75eef9ac87c5a47fd69152a1006ca06e76"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48871,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "103e46b6a56a40f7fd40c4f37aeef488441bb36f5d0c02c8b91869083ce132f3"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48872,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "c89eb9edf91b5846a7e011212626d30fba6b19c7654e1dc438b96c3e1ff3cc8e"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48873,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "ef499f00c57d47e2ad95ad1b5f596986e1fff79229286a342fec268ceee32c9a"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48874,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "7a46835b935238d8cdf510260d63e1bb2de2ce4b9c0411e3b248399f6a2bab8e"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48875,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "be28b174bacc3eb9eb8f0ec2c7d0ded62e68946baf13fa6fd344183604bc76b0"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48876,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "9d2a0bb72bc7b62d3ceaeaab7d0bc7fb2b944b3fc680293e9f9ac056dc340eae"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48877,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "52358c1109ce6215fbe3f959d3ae878c8c9ef8bb3b23912ed1605c89ea954010"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48878,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "d4f811823b25c64d1be62df168cc079b7c8c567f6433a4c4d16fb44290b4a38e"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48879,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "acf565e82a96e6b76a619f67a0c187f89f01798db3badc92b1a6e8f1ea756205"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48880,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "17150a95bdd6f585f2545cc5a0433351da1f15daccd080b8ac352d6db21c3d76"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48881,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "cd030143892dcb8e3518c16e9d2382d35eeee16f1060e72c3b830be1ebc42fc4"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48882,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "c305c1b9e3a1b1f1f9c3b3b1f01b26a268ffbff58c8450d0c018e3c523328a18"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48883,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "96b3a7671eb9dff448942252146afe003a51caf2e3bdb62f39d3bc0682d96c65"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48884,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "9d44f5e879d684f823b650b5701fc0a4364c9baf631551863b220beedcfa7bc1"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48885,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "4e86cdc6b828f6d89a1d46ff0a507e9962b9dad61afc4e08dca4df88ffc7ffba"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48886,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "e59940d055ff4ca53b5f78a3f58ba4e9c89d7e0249db734fb4a451c4a1ce4d6a"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48887,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "ff6eb2b8103e2c4a21cc17baefc963f5899bf2aa41c18080cb9342decd035784"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48888,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "8a662e096ee28622b7659b396edce8917b0c752cd4887942910261a534f5bec5"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48889,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "becc2c49e4497d5da5173392b83c6f1e9e6177232197dace3bc47507b0dfc25e"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48890,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "9247adc8eac84729bf1f1e84c35f518ca4fdec72281dc38933cc7cf577b0bf09"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48891,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "4ce153d1d2c8fa6f4586063ecb1b040f260ebf8c80f1683de817c1698aa39312"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48892,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "97c8c2178601fd0d640fbca285fefd6125b5bbfc1222e0675bbe37238a4e734b"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48893,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "b10abdb19004217cdc07ad69d377ff2731c898ef47f8be3387cc3483a2f5ef91"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48894,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "ca9c5da3141ec09934f9e8b69e0faa79674cc7b4c4e2269d6c70764b02fd39ad"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48895,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "8bacc383c29c138a9ab4f00a183157bf3e0cb27b87503aa61b3a3be7872e6095"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48896,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "73a015b73c50ae9d00703f852cc46f90fc649f84bb52dcfd4b0ed153821b27ba"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48897,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "fbe80c571487f59b9ee5a537474c509b2f3dcf6620007129d64016fed6c9b1f3"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48898,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "e835382e68f5a8e6e619fbc53f41f2f9986c0300330a3b9cd57dc7bd422c75be"
+    },
+    {
+      "common_prefix_action_count": 15,
+      "episode_seed": 48899,
+      "first_planner_action_index": 15,
+      "full_no_pair_initial_hypothesis_sha256": "b350dd1118fb239608eda6702f416e32e77d9b6d66917a5d6e46ebb5e5bcf54b"
+    }
+  ],
+  "reserved_final_range_untouched": [
+    49900,
+    50999
+  ],
+  "row_count": 400,
+  "schema_version": 1,
+  "valid": true
+}

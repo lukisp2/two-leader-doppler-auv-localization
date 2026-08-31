@@ -1,0 +1,10 @@
+# Preserve the exact bytes of frozen scientific tables across checkouts.
+data/tables/*.csv -text
+
+# Keep source and documentation line endings normalized and predictable.
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf

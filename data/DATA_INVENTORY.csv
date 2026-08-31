@@ -1,0 +1,23 @@
+manuscript_item,release_path,original_campaign,artifact_kind,expected_rows,distribution,status
+Tables 6-7,data/tables/leader_source_policy_episode_rows.csv,experiments_v38_leader_source_ablation_replication_48600_48699,per-arm episode CSV,600,git,exported
+Tables 6-7,data/tables/leader_source_policy_summary.json,experiments_v38_leader_source_ablation_replication_48600_48699,campaign summary,1,git,exported
+Figures 2 and 7,data/raw/leader_source_ablation/,experiments_v38_leader_source_ablation_replication_48600_48699,complete paired campaign with 600 episode JSON 600 trajectory NPZ 100 noise tapes and audit/control metadata,600,doi_archive,staged_reserved_data_record_unpublished
+Table 8,data/tables/estimator_checkpoint_rows.csv,experiments_v27_publication_baselines_dev100 + experiments_v34_mhe60_baseline_dev100,normalized method-checkpoint rows,4500,git,exported_verified
+Table 8,data/tables/estimator_benchmark_summary.json,same two estimator campaigns,row-derived aggregate and manuscript cross-check,1,git,exported_verified
+Table 8,data/raw/estimator_benchmark/v27_campaign/,experiments_v27_publication_baselines_dev100,scored and unscored estimator JSON plus contract audit and decision,4000+4000,doi_archive,staged_reserved_data_record_unpublished
+Table 8,data/raw/estimator_benchmark/v34_campaign/,experiments_v34_mhe60_baseline_dev100,scored and unscored MHE JSON plus contract audit and decision,500+500,doi_archive,staged_reserved_data_record_unpublished
+Table 8,data/raw/estimator_benchmark/measurement_history/,experiments_v19_observability_estimator_benchmark_dev100/measurement_archive,100 online-input truth-label and capture-metadata triplets,100,doi_archive,staged_reserved_data_record_unpublished
+Table 8,data/raw/estimator_benchmark/legacy_pf_traces/,experiments_v18_1_guard_ablation_dev_3seed/evaluations/dev100_seed_28001_range_45000_45099/traces_npz/deterministic_greedy_grid,historical PF state and covariance traces referenced by V27,100,doi_archive,staged_reserved_data_record_unpublished
+Table 8 replay audit,data/raw/estimator_benchmark/v18_replay_fixture/,V18.1 episode 0000 sanitized metadata trace and noise tape,minimal bit-exact capture/replay integration fixture,1,doi_archive,staged_reserved_data_record_unpublished
+Table 9,data/tables/planner_component_episode_rows.csv,experiments_v39_planner_component_ablation_dev100,per-arm episode CSV,400,git,exported
+Table 9,data/tables/planner_component_summary.json,experiments_v39_planner_component_ablation_dev100,campaign summary,1,git,exported
+Table 9 provenance,data/provenance/planner_component_ablation/,experiments_v39_planner_component_ablation_dev100,path-sanitized contract summary decision independent audit and provenance export manifest,5,git,exported_path_sanitized_provenance
+Table 10,data/tables/dynamic_plant_episode_rows.csv,experiments_v40_dynamic_current_factorial_qualification100,per-arm episode CSV,800,git,exported_validated
+Table 10,data/tables/v40_publication_arms.csv,same as above,validated eight-cell publication table,8,git,exported_validated
+Table 10,data/tables/v40_publication_results.json,same as above,summary-independent paired effects interactions screens and command diagnostics,1,git,exported_validated
+Figure 9,data/tables/v40_interaction_plot.csv,same as above,long-format interaction-plot cell data,88,git,exported_validated
+Table 10 audit,data/tables/v40_postprocessed_full.json,same as above,complete contract source trace and factorial postprocessing audit,1,git,exported_validated
+Table 10,data/raw/dynamic_plant_stress/campaign/,same as above,path-sanitized complete campaign with 800 episode JSON 800 trajectory NPZ 100 noise tapes 14 source files approved environment metadata and projection manifest,1721,doi_archive,staged_path_sanitized_validated_reserved_data_record_unpublished
+Table 11,data/tables/closed_loop_stress_episode_rows.csv,experiments_v35_closed_loop_stress_dev100,per-arm episode CSV,1200,git,exported_descriptive_campaign_invalid_runtime_gate
+Table 11,data/tables/closed_loop_stress_summary.json,experiments_v35_closed_loop_stress_dev100,campaign summary with integrity_valid=false and V35_INVALID,1,git,exported_descriptive_campaign_invalid_runtime_gate
+Table 11 provenance,data/provenance/closed_loop_stress/,experiments_v35_closed_loop_stress_dev100,path-sanitized contract summary decision and provenance export manifest,4,git,exported_path_sanitized_provenance_campaign_invalid_runtime_gate
