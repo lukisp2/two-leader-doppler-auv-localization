@@ -31,11 +31,15 @@ archived campaign.
 
 The source release and raw-data deposit are independently versioned and have
 separate manifests. Verification checks both the listed hashes and the exact
-logical payload tree by default. Thus an unlisted result, an old preliminary
-manifest, `.DS_Store`, `._*`, or `__MACOSX` content causes failure. Fixed local
-checkout/runtime directories such as `.git`, `.venv`, and `__pycache__` are
-not release payload and are ignored. From the source-repository root, verify
-the repository:
+logical payload tree by default. At a Git top level, that logical tree is the
+tracked inventory, matching the source-manifest generator; ignored local
+campaign output and `SHA256SUMS.preliminary` are therefore outside the source
+release view. In an extracted source or data archive without Git metadata,
+the logical tree is the full filesystem: an unlisted result, an old
+preliminary manifest, `.DS_Store`, `._*`, or `__MACOSX` content then causes
+failure. Fixed local checkout/runtime directories such as `.git`, `.venv`,
+and `__pycache__` are not release payload. From the source-repository root,
+verify the repository:
 
 ```bash
 python scripts/verify_sha256_manifest.py SHA256SUMS

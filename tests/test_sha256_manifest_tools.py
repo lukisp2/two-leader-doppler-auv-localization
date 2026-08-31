@@ -75,12 +75,26 @@ def test_git_inventory_uses_only_clean_tracked_files(tmp_path: Path) -> None:
     _git(tmp_path, "init", "-q")
     _git(tmp_path, "config", "user.name", "Manifest Test")
     _git(tmp_path, "config", "user.email", "manifest@example.invalid")
-    _write(tmp_path / ".gitignore", "results/*\n!results/.gitkeep\n")
+    _write(
+        tmp_path / ".gitignore",
+        "results/*\n"
+        "!results/.gitkeep\n"
+        "code/experiments_v34_mhe60_baseline_smoke/\n"
+        "SHA256SUMS.preliminary\n",
+    )
     _write(tmp_path / "tracked.txt")
     _write(tmp_path / "results" / ".gitkeep", "")
     _git(tmp_path, "add", ".")
     _git(tmp_path, "commit", "-q", "-m", "fixture")
     _write(tmp_path / "results" / "ignored-run.csv")
+    _write(tmp_path / "results" / "portable_inputs" / "history.json")
+    _write(
+        tmp_path
+        / "code"
+        / "experiments_v34_mhe60_baseline_smoke"
+        / "campaign_summary.json"
+    )
+    _write(tmp_path / "SHA256SUMS.preliminary")
     _write(tmp_path / "untracked-note.txt")
 
     generated = _run(GENERATE, "--root", tmp_path)
@@ -92,14 +106,14 @@ def test_git_inventory_uses_only_clean_tracked_files(tmp_path: Path) -> None:
     assert "untracked-note.txt" not in (tmp_path / "SHA256SUMS").read_text()
 
     verified = _run(VERIFY, tmp_path / "SHA256SUMS")
-    assert verified.returncode == 1
-    assert "FAIL unexpected: results/ignored-run.csv" in verified.stdout
-    assert "FAIL unexpected: untracked-note.txt" in verified.stdout
+    assert verified.returncode == 0, verified.stdout
+    assert "tracked-Git exact-tree validation" in verified.stdout
 
-    (tmp_path / "results" / "ignored-run.csv").unlink()
-    (tmp_path / "untracked-note.txt").unlink()
-    clean_verification = _run(VERIFY, tmp_path / "SHA256SUMS")
-    assert clean_verification.returncode == 0, clean_verification.stdout
+    _write(tmp_path / "newly-tracked.txt")
+    _git(tmp_path, "add", "newly-tracked.txt")
+    tracked_extra = _run(VERIFY, tmp_path / "SHA256SUMS")
+    assert tracked_extra.returncode == 1
+    assert "FAIL unexpected: newly-tracked.txt" in tracked_extra.stdout
 
 
 @pytest.mark.skipif(shutil.which("git") is None, reason="Git is required")
@@ -181,7 +195,7 @@ def test_exact_tree_rejects_empty_macos_metadata_directory(tmp_path: Path) -> No
     assert "FAIL unexpected directory: __MACOSX" in result.stdout
 
 
-def test_exact_tree_ignores_only_fixed_local_metadata_directories(
+def test_filesystem_exact_tree_ignores_only_fixed_runtime_cache_directories(
     tmp_path: Path,
 ) -> None:
     _write(tmp_path / "payload.txt")
@@ -189,7 +203,7 @@ def test_exact_tree_ignores_only_fixed_local_metadata_directories(
         GENERATE, "--root", tmp_path, "--inventory", "filesystem"
     )
     assert generated.returncode == 0, generated.stderr
-    _write(tmp_path / ".git" / "config")
+    _write(tmp_path / ".pytest_cache" / "state")
     _write(tmp_path / "__pycache__" / "module.pyc")
 
     result = _run(VERIFY, tmp_path / "SHA256SUMS")

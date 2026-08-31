@@ -9,6 +9,7 @@ import os
 from pathlib import Path, PurePosixPath
 import re
 import stat
+import subprocess
 
 
 HASH_RE = re.compile(r"[0-9a-f]{64}\Z")
@@ -65,7 +66,57 @@ def _forbidden_manifest_path(relative: PurePosixPath) -> bool:
         or relative.name == ".DS_Store"
         or relative.name.startswith("._")
         or relative.name.startswith("SHA256SUMS")
+        or relative.name.startswith(".SHA256SUMS")
     )
+
+
+def _git_tree_files(root: Path) -> tuple[set[str] | None, list[str]]:
+    """Return the logical tracked tree only when ``root`` is the Git top level."""
+
+    failures: list[str] = []
+    try:
+        top_level = subprocess.run(
+            ["git", "-C", os.fspath(root), "rev-parse", "--show-toplevel"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+            text=True,
+        )
+    except FileNotFoundError:
+        if (root / ".git").exists() or (root / ".git").is_symlink():
+            return set(), ["cannot inspect tracked tree: Git executable not found"]
+        return None, []
+    if top_level.returncode != 0:
+        if (root / ".git").exists() or (root / ".git").is_symlink():
+            message = top_level.stderr.strip() or "git rev-parse failed"
+            return set(), [f"cannot inspect tracked tree: {message}"]
+        return None, []
+    if Path(top_level.stdout.strip()).resolve() != root:
+        return None, []
+
+    listed = subprocess.run(
+        ["git", "-C", os.fspath(root), "ls-files", "-z", "--cached", "--", "."],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if listed.returncode != 0:
+        message = listed.stderr.decode("utf-8", errors="replace").strip()
+        return set(), [f"cannot list tracked files: {message}"]
+
+    files: set[str] = set()
+    for raw in listed.stdout.split(b"\0"):
+        if not raw:
+            continue
+        try:
+            rendered = raw.decode("utf-8", errors="strict")
+            relative = _parse_relative(rendered)
+        except (UnicodeDecodeError, ValueError) as exc:
+            failures.append(f"invalid tracked path: {exc}")
+            continue
+        if not _forbidden_manifest_path(relative):
+            files.add(relative.as_posix())
+    return files, failures
 
 
 def _tree_files(root: Path) -> tuple[set[str], list[str]]:
@@ -207,13 +258,20 @@ def main() -> int:
         checked += 1
 
     if not args.no_exact_tree:
-        actual_paths, tree_failures = _tree_files(root)
+        actual_paths, tree_failures = _git_tree_files(root)
+        tree_kind = "tracked-Git"
+        if actual_paths is None:
+            actual_paths, tree_failures = _tree_files(root)
+            tree_kind = "filesystem"
         failures.extend(tree_failures)
         manifest_relative = manifest.relative_to(root).as_posix()
         allowed = {manifest_relative, *args.allow_extra}
         extras = sorted(actual_paths - set(expected_paths) - allowed)
         for relative in extras:
             failures.append(f"unexpected: {relative}")
+        nonlogical = sorted(set(expected_paths) - actual_paths)
+        for relative in nonlogical:
+            failures.append(f"manifested path is outside logical tree: {relative}")
         missing_allowed = sorted(set(args.allow_extra) - actual_paths)
         for relative in missing_allowed:
             failures.append(f"allowed extra does not exist: {relative}")
@@ -222,7 +280,11 @@ def main() -> int:
         for failure in failures:
             print(f"FAIL {failure}")
         return 1
-    suffix = " with exact-tree validation" if not args.no_exact_tree else ""
+    suffix = (
+        f" with {tree_kind} exact-tree validation"
+        if not args.no_exact_tree
+        else ""
+    )
     print(f"Verified {checked} files{suffix}.")
     return 0
 
