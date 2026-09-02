@@ -19,6 +19,7 @@ FIGURE_SCRIPTS = (
     "make_publication_figure_full_history_estimator.py",
     "make_publication_figure_source_policy_dynamics.py",
     "make_publication_figure_source_policy_ablation.py",
+    "make_publication_figure_policy_execution_current.py",
     "make_publication_figures_v33.py",
 )
 
@@ -110,6 +111,16 @@ def test_compact_quantitative_inputs_render_current_figures(
     )
     assert (tmp_path / "fig_estimator_history.pdf").stat().st_size > 10_000
     assert not (tmp_path / "fig_closed_loop_stress.pdf").exists()
+
+    execution_current = tmp_path / "fig_policy_execution_current.pdf"
+    run_figure_script(
+        "make_publication_figure_policy_execution_current.py",
+        "--output-pdf",
+        str(execution_current),
+        "--no-png",
+        environment=figure_environment,
+    )
+    assert execution_current.stat().st_size > 10_000
 
     run_figure_script(
         "make_publication_figures_v33.py",

@@ -1,8 +1,10 @@
 # Reproducibility guide
 
-Version `1.0.0` uses source repository
-<https://github.com/lukisp2/two-leader-doppler-auv-localization>, software DOI
-`10.5281/zenodo.22214022`, and raw-data DOI `10.5281/zenodo.22214031`.
+Current version `1.1.0` uses source repository
+<https://github.com/lukisp2/two-leader-doppler-auv-localization> and tag
+`v1.1.0`. Software DOI `10.5281/zenodo.22214022` and raw-data DOI
+`10.5281/zenodo.22214031` identify only the preceding immutable `v1.0.0`
+archives; they do not contain the controller addendum.
 
 ## 1. Create the release-validation environment
 
@@ -100,6 +102,12 @@ included the bit-exact V18.1 capture/replay integration test, fail-closed path
 projection checks, and exact-tree manifest checks. A failure caused solely by
 installing an optional JIT stack is not a release-validation result.
 
+That 241-test count belongs to immutable release `v1.0.0`. The controller-
+repair update is validated separately in `v1.1.0`. With
+`UUV_V41_RUN_SMOKE_EQUIVALENCE=1`, the DOI archive connected, and the optional
+Numba import unavailable, the final combined run reported **275 passed tests
+and 64 passed subtests**. The historical `v1.0.0` count above is not revised.
+
 ## 4. Reproduce manuscript tables
 
 Campaign entry points are listed in `docs/TABLES_AND_DATA.md`. Invoke their `--help` before a full run because each runner records its own frozen contract and seed policy:
@@ -111,12 +119,15 @@ PYTHONPATH=code python code/run_v34_mhe60_baseline.py --help
 PYTHONPATH=code python code/run_v39_planner_component_ablation.py --help
 PYTHONPATH=code python code/run_v35_closed_loop_stress.py --help
 PYTHONPATH=code python code/run_v40_dynamic_plant_stress.py --help
+PYTHONPATH=code python code/run_v41_controller_repair.py --help
 ```
 
 For manuscript verification, regenerating tables from the released row-level files is the fast path. A complete campaign rerun is the strong path and may take several hours.
 
 The canonical full-run commands are below. They use the frozen cohort and
-publication settings; do not substitute the sealed final range. Except for the
+publication settings; do not substitute the reserved, runner-excluded range.
+This wording records an execution rule, not a global claim of prior non-access.
+Except for the
 explicit V35 block, they use the release-validation environment from Section
 1. Wall times are the recorded order of magnitude on the reference Mac and are
 not acceptance criteria.
@@ -204,19 +215,54 @@ Reactivate and verify the release-validation environment before continuing:
 source .venv/bin/activate
 python scripts/verify_environment.py
 
-# Table 10 and Figure 9: seeds 49900--49999 x 8 arms = 800 rows;
+# Table 10, Panel A, and Figure 9(a): seeds 49900--49999 x 8 arms = 800 rows;
 # approximately three hours on the reference Mac.
 PYTHONPATH=code python code/run_v40_dynamic_plant_stress.py \
   --output-dir results/campaigns/dynamic_current_qualification \
   --episodes 100 --episode-start 0 \
   --coarse-candidates 4096 --coarse-sweeps 2 --local-starts 48 \
   --progress-every 4
+
+# Table 10, Panel B, and Figure 9(b,c): seeds 51000--51099 x 4 arms =
+# 400 rows; approximately 55 min on the reference Mac. The runner provides a
+# tqdm progress bar and writes atomic resumable checkpoints.
+PYTHONPATH=code python code/run_v41_controller_repair.py \
+  --output-dir results/campaigns/controller_repair
 ```
 
 Each runner writes its own contract, source hashes, seed list, checkpointed
 row files, independent-audit inputs, and final decision. `--resume` continues
 only a contract-compatible partial output; it does not relax a seed or source
 check.
+
+The V41.1 runner preserves an inherited ambiguous frozen decision label. Its
+valid completed campaign missed one composite non-inferiority screen; it was
+not integrity-invalid. Reconstruct the compact publication outputs and
+unambiguous semantic audit from a completed campaign into new destinations:
+
+```bash
+PYTHONPATH=code python scripts/export_v41_controller_repair.py \
+  results/campaigns/controller_repair \
+  --table-dir results/controller_repair_public/tables \
+  --provenance-dir results/controller_repair_public/provenance \
+  --source-root .
+```
+
+Build the next-version DOI component with:
+
+```bash
+python scripts/project_v41_doi_campaign.py \
+  results/campaigns/controller_repair \
+  results/controller_repair_doi/campaign \
+  --public-environment-metadata \
+  experiments_v18_1_guard_ablation_dev_3seed/evaluations/\
+dev100_seed_28001_range_45000_45099/metadata.json
+```
+
+The existing version-`1.0.0` DOI records do not include this component. The
+compact 400-row result and provenance needed for Table 10, Panel B, and
+Fig. 9(b,c) are public in GitHub tag `v1.1.0`; the projector prepares a future
+versioned raw-trace deposit.
 
 Table 8 has a dedicated source-free cross-check and archive exporter:
 
@@ -242,7 +288,7 @@ MPLBACKEND=Agg PYTHONPATH=code python code/make_publication_figure_doppler_geome
 MPLBACKEND=Agg PYTHONPATH=code python code/make_publication_figure_full_history_estimator.py
 MPLBACKEND=Agg PYTHONPATH=code python code/make_publication_figure_source_policy_ablation.py
 MPLBACKEND=Agg PYTHONPATH=code python code/make_publication_figures_v33.py --figure estimator-history
-MPLBACKEND=Agg PYTHONPATH=code python scripts/plot_v40_qualification_figure.py
+MPLBACKEND=Agg PYTHONPATH=code python code/make_publication_figure_policy_execution_current.py
 ```
 
 The corresponding row-derived table checks are:

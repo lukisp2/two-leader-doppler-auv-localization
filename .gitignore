@@ -19,6 +19,12 @@ data/downloads/
 *.pid
 SHA256SUMS.preliminary
 /code/experiments_v34_mhe60_baseline_smoke/
+/code/experiments_v41_controller_repair_smoke/
+/code/experiments_v41p1_controller_repair_smoke/
+/code/experiments_v41p1_controller_repair_qualification100/
+/experiments_v41_controller_repair_smoke/
+/experiments_v41p1_controller_repair_smoke/
+/experiments_v41p1_controller_repair_qualification100/
 
 # Large numerical traces must be attached to a release/DOI archive.
 *.npz

@@ -5,6 +5,11 @@ The raw-data archive for version `1.0.0` is identified by DOI
 `10.5281/zenodo.22214022`, with source at
 <https://github.com/lukisp2/two-leader-doppler-auv-localization>.
 
+GitHub tag `v1.1.0` adds the complete 400-row controller-study outcomes,
+compact paired statistics, provenance, and regeneration scripts. These files
+are public in Git but are not claimed to be contained in the earlier DOI
+records.
+
 `tables/` contains compact, row-level CSV/JSON material needed to regenerate the manuscript tables. `DATA_INVENTORY.csv` describes both compact files and larger artifacts distributed through the release/DOI archive.
 
 `provenance/` contains the lightweight control records for the two campaigns
@@ -17,6 +22,16 @@ decision, and export manifest. Each `provenance_export_manifest.json` records
 the original and exported SHA-256 of every copied campaign artifact. The only
 export transformation was a literal replacement of the private source-root
 prefix by `${FROZEN_SOURCE_ROOT}`; no scientific value was changed.
+
+Version `v1.1.0` adds a third controller-study provenance bundle,
+`provenance/controller_repair/`, and three compact table artifacts. It retains
+all 400 episode-arm outcomes in Git. Its frozen decision label joined rejection
+and invalidity; the additive public audit records that the campaign was valid
+and complete but missed one prespecified composite acceptance condition. The
+audit also narrows inherited `sealed_seed_range_untouched` language to what is
+actually verified: the selected 51000--51099 cohort is disjoint from the
+reserved 50000--50999 range. It does not claim that no external process ever
+opened the reserved seeds.
 
 `closed_loop_stress_episode_rows.csv` and its summary are deliberately
 retained as **descriptive data from an integrity-invalid campaign**. Five of
@@ -66,3 +81,10 @@ traces, tapes, and source files are byte-for-byte copies. After extraction,
 run the independent postprocessor documented in
 `../docs/V40_QUALIFICATION_POSTPROCESSOR.md`; its five validated
 row-level/compact outputs belong in `tables/`, never inside the campaign tree.
+
+The complete controller-repair qualification is not part of data DOI
+`10.5281/zenodo.22214031`. Before publishing the next data version, create its
+portable component with `scripts/project_v41_doi_campaign.py`; do not copy the
+private campaign directory directly. The validated projection has 924 files:
+922 frozen campaign files, approved public environment metadata, and the
+projection manifest.

@@ -4,24 +4,33 @@ Reference implementation and reproducibility materials for:
 
 > **Active Follower Localization Using Two-Leader Doppler Measurements for 3-D Autonomous Underwater Vehicle Formation Tracking**
 
-The repository contains the causal full-history Doppler estimator, retained-mode active acquisition planner, evidence-qualified acquire-to-track gate, formation controller, comparison estimators, stress generators, and scripts used to reproduce the manuscript tables and figures.
+The repository contains the causal full-history Doppler estimator, retained-mode active acquisition planner, evidence-qualified acquire-to-track gate, delay-aware formation tracker, comparison estimators, stress generators, and scripts used to reproduce the manuscript tables and figures.
 
 ## Scope
 
 The follower receives broadcast leader positions and velocities, measures one-way Doppler range rate on one or two leader links, and dead-reckons its own motion. During `ACQUIRE`, it retains competing initial-position hypotheses and commands bounded maneuvers that improve weak information directions and separate plausible modes. It enters `TRACK` only after independent residual, consistency, separation, and stability checks pass.
+
+After an evidence-qualified TRACK release, the current resubmission branch uses
+a deterministic delay-aware tracker with a Smith predictor, a causal reference
+governor, bumpless transfer, and command slew limits. The former stateless
+proportional tracker is retained as the paired reference arm.
 
 This is simulation research code. It is **not** certified guidance, navigation, or control software.
 
 ## Release identifiers
 
 - source repository: <https://github.com/lukisp2/two-leader-doppler-auv-localization>;
-- version and tag: `1.0.0` / `v1.0.0`;
-- release date: `2026-08-31`;
-- software DOI: <https://doi.org/10.5281/zenodo.22214022>;
-- raw-data DOI: <https://doi.org/10.5281/zenodo.22214031>.
+- current version and tag: `1.1.0` / `v1.1.0`;
+- release date: `2026-09-02`;
+- preceding software archive (`v1.0.0`): <https://doi.org/10.5281/zenodo.22214022>;
+- preceding raw-data archive (`v1.0.0`): <https://doi.org/10.5281/zenodo.22214031>.
 
-The version-specific Zenodo records correspond respectively to the tagged
-software source and to the separately licensed raw simulation archive.
+The immutable Zenodo records correspond to `v1.0.0`. The current `v1.1.0`
+GitHub tag adds the delay-aware controller, the frozen controller-only
+qualification protocol, 400 row-level outcomes, compact paired results,
+provenance, tests, and Table 10/Fig. 9 regeneration. Those additions are
+public in Git but are not claimed to be present in the earlier DOI records.
+A validated projector is provided for a future versioned raw-trace deposit.
 
 ## Release-validation environment
 
@@ -79,6 +88,10 @@ pytest-native parametrized checks. Run all of them through pytest:
 PYTHONPATH=code python -m pytest tests -v
 ```
 
+The final archive-connected `v1.1.0` validation used the environment above,
+disabled the optional Numba import, enabled the full baseline-equivalence
+smoke, and reported **275 passed tests and 64 passed subtests**.
+
 Verify the lightweight source repository from its root:
 
 ```bash
@@ -101,6 +114,9 @@ The archival publication sequence is recorded in
 The summary-independent dynamic-response audit and compact eight-cell export
 are documented in
 [docs/V40_QUALIFICATION_POSTPROCESSOR.md](docs/V40_QUALIFICATION_POSTPROCESSOR.md).
+The paired post-TRACK controller repair, its one failed composite acceptance
+condition, and the corrected decision/seed-marker semantics are documented in
+[docs/V41_CONTROLLER_REPAIR_AUDIT.md](docs/V41_CONTROLLER_REPAIR_AUDIT.md).
 
 ## Data policy
 
@@ -120,6 +136,12 @@ The dynamic-response campaign is deposited through the tested
 environment-metadata path changes, while all recorded outcomes, trajectories,
 noise tapes, and frozen source files remain byte-for-byte identical.
 
+The controller-repair update follows the same boundary through
+`scripts/project_v41_doi_campaign.py`. Git contains all 400 row-level outcomes,
+four compact publication cells, a row-derived results document, and a
+path-sanitized provenance bundle. Its complete JSON/NPZ campaign remains local
+until it is assigned to the next DOI data version.
+
 The closed-loop stress data used descriptively in manuscript Table 11
 come from a campaign that was **invalid under its prespecified joint runtime
 gate**: 5 of 1200 optional bias-switch runs exceeded the 2-s decision limit
@@ -131,12 +153,22 @@ Regeneration of the archived diagnostic plot requires the explicit
 `--allow-invalid-descriptive` acknowledgement documented in
 `docs/TABLES_AND_DATA.md`.
 
+The controller-repair qualification is integrity-valid but did not meet every
+prespecified acceptance condition. Terminal success increased from 38% to 95%
+without current and from 26% to 95% with visible current; Tail80 success rose
+from 2% to 91% and from 6% to 92%. The no-current terminal-localization p95
+difference was 0.5669 m, exceeding the frozen 0.50-m non-inferiority margin by
+0.0669 m. The frozen ambiguous label is preserved, while the public audit
+records the precise interpretation
+`VALID_COMPLETE__COMPOSITE_ACCEPTANCE_NOT_MET`.
+
 ## Citation
 
-Use the metadata in [CITATION.cff](CITATION.cff). The software release is
-identified by DOI `10.5281/zenodo.22214022`, and its separately archived raw
-data by DOI `10.5281/zenodo.22214031`. The journal DOI will be added after
-article publication.
+Use the metadata in [CITATION.cff](CITATION.cff) for the current GitHub tag
+`v1.1.0`. DOI `10.5281/zenodo.22214022` identifies only the preceding
+`v1.0.0` software snapshot, and DOI `10.5281/zenodo.22214031` identifies its
+separate raw-data archive; neither DOI contains the controller addendum. The
+journal DOI will be added after article publication.
 
 ## License
 

@@ -1,9 +1,11 @@
 # Source provenance and release boundary
 
-This provenance record accompanies source version `1.0.0` at
+This provenance record accompanies source version `1.1.0` at
 <https://github.com/lukisp2/two-leader-doppler-auv-localization>. The software
-record has DOI `10.5281/zenodo.22214022`, and the separate data record has DOI
-`10.5281/zenodo.22214031`.
+record DOI `10.5281/zenodo.22214022` and separate data-record DOI
+`10.5281/zenodo.22214031` archive the preceding immutable `v1.0.0` release.
+The controller addendum is public in GitHub tag `v1.1.0` and is not attributed
+to those earlier DOI versions.
 
 The research working directory is part of a larger workspace containing
 unrelated and work-in-progress material. This public repository is therefore a
@@ -71,6 +73,30 @@ canonical environment-configuration hash, exact cardinalities, and
 `scientific_values_changed: false`. The manifest itself is the 1721st file and
 is covered later by the DOI archive's final top-level `SHA256SUMS`.
 
+## Version 1.1.0 controller-repair boundary
+
+The controller runner and its delay-aware tracker were added after the
+immutable `v1.0.0` tag and released in `v1.1.0`. The 15-file execution closure
+is frozen in the completed
+campaign and listed in `docs/SOURCE_FILES.txt`. The complete local campaign is
+not committed to Git. Its future public DOI view must be created with
+`scripts/project_v41_doi_campaign.py`, which reuses the audited V40 projection
+logic with V41.1 cardinalities: 400 episode JSON, 400 trace NPZ, 100 noise NPZ,
+and 15 source-snapshot files.
+
+The qualification contract already hashes the approved public environment
+metadata projection. Its private absolute path includes a directory name with
+whitespace, so the V41 wrapper performs JSON-aware whole-string path detection
+before invoking the shared fail-closed projection. A validation export
+confirmed 922 input campaign files, 923 exported files before the manifest, no private
+path remaining, and byte-for-byte preservation of all 921 unchanged campaign
+files.
+
+The row-level publication exporter does not alter the frozen campaign. It
+adds a semantic audit that distinguishes integrity validity from composite
+acceptance and corrects overbroad interpretation of inherited reserved-seed
+markers. See `docs/V41_CONTROLLER_REPAIR_AUDIT.md`.
+
 ## Publication-figure portability projection
 
 The figure modules were copied from the frozen private source tree, then
@@ -82,12 +108,14 @@ quantities, labels, styles, and manuscript layouts were retained. The
 paired-episode module is included because it is the complete local import and
 data-validation closure of the mission-geometry generator. The
 closed-loop-stress plot remains an archived diagnostic and is not Figure 9 of
-the resubmission; the resubmission's Figure 9 comes from the command-response
-qualification export.
+the resubmission. The replacement Figure 9 combines the compact V40 command-
+response diagnosis with the row-validated controller-repair export and does
+not read a private campaign directory.
 
 | Public module | Frozen private SHA-256 | Public portability-projection SHA-256 |
 |---|---|---|
 | `make_publication_figure_paired_episode.py` | `991a92d981c38e83e56724420eae494dc5744ebcfa96eeb7abc711d59fdab883` | `ff2efde0e565f54f1fbbc3f83dff7504a83c5e484622e2ffe668882f6eb4d9b8` |
+| `make_publication_figure_policy_execution_current.py` | `edae6257bc3b58bb36e6685349a7c1e42b15e0f4116f707c71f37c11bea3b4be` | `a7a5399904554236ca6a58cda997f7d8412bd529c32fe3dd4e27bfd968ded044` |
 | `make_publication_figure_mission_geometry.py` | `49ae7e8b87f77e1a2a9436b32218e7131ed3f1e00bb60674cfa99ca7c5ee62a8` | `61f4037f7c9903b95e8ad8677a5fa7bd17ee9df6b3891fdcaba1326868e8efa3` |
 | `make_publication_figure_doppler_geometry.py` | `7aa7424c48752ecb22db19b4458c41620cf6cb762a838bf2690ea8af636e6994` | `933aa7adbca66312c21664b33280ac968bbd7d45c8d2e26688b816dcabe3950b` |
 | `make_publication_figure_full_history_estimator.py` | `81ab603258fca11497684372aed285a8774b5f60363f3dcb740ba2399f5777de` | `66b41b086c4559b74e59a8241f7a98389a4763f0124a2dd33152bb05455d3f35` |

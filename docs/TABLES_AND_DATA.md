@@ -1,9 +1,11 @@
 # Manuscript table-to-artifact map
 
-The separate raw archive is identified by data DOI
-`10.5281/zenodo.22214031`; its companion software release is identified by DOI
-`10.5281/zenodo.22214022` at
-<https://github.com/lukisp2/two-leader-doppler-auv-localization>.
+The preceding `v1.0.0` raw archive is identified by data DOI
+`10.5281/zenodo.22214031`; its companion `v1.0.0` software snapshot is
+identified by DOI `10.5281/zenodo.22214022`. The current source, compact data,
+and controller addendum are public at
+<https://github.com/lukisp2/two-leader-doppler-auv-localization> under tag
+`v1.1.0`; they are not attributed to the earlier DOI records.
 
 Internal campaign identifiers below are provenance labels only. The manuscript
 refers to methods and experiments descriptively. The item numbers below match
@@ -11,14 +13,18 @@ the frozen resubmission layout; the two row-level tables numbered 5--6 in the
 reviewed version are Tables 6--7 in the resubmission because the modality
 comparison was added as Table 1.
 
+The internal V41.1 name below is provenance only and does not appear as a
+method name in the manuscript.
+
 | Resubmission item | Scientific comparison | Code entry point | Compact source data | Raw archive or provenance bundle |
 |---|---|---|---|---|
 | Table 6 | One vs. two Doppler links crossed with prescribed vs. active acquisition | `code/run_v38_leader_source_ablation_replication.py`; `code/make_publication_table_source_policy_ablation.py` | `data/tables/leader_source_policy_episode_rows.csv` | `leader_source_ablation/` |
 | Table 7 | Prespecified paired link/acquisition contrasts | `code/run_v38_leader_source_ablation_replication.py`; `code/make_publication_table_source_policy_contrasts.py` | `data/tables/leader_source_policy_episode_rows.csv` | `leader_source_ablation/` |
 | Table 8 | Estimator benchmark: PF, EKF/NLS/global-history, and MHE | `scripts/prepare_v27_public_archive.py`; `code/run_v27_publication_baselines.py`; `code/run_v34_mhe60_baseline.py`; `scripts/export_estimator_benchmark.py` | `data/tables/estimator_checkpoint_rows.csv`; `data/tables/estimator_benchmark_summary.json` | `estimator_benchmark/v27_campaign/`, `estimator_benchmark/v34_campaign/`, `estimator_benchmark/measurement_history/`, `estimator_benchmark/legacy_pf_traces/`, and the minimal `estimator_benchmark/v18_replay_fixture/` used only by the capture/replay integration test |
 | Table 9 | Planner-component ablation | `code/run_v39_planner_component_ablation.py`; `code/make_publication_table_planner_component_ablation.py` | `data/tables/planner_component_episode_rows.csv`; `data/tables/planner_component_summary.json` | Git provenance bundle: `data/provenance/planner_component_ablation/`; no separate raw archive is required because all 400 outcome rows are committed |
-| Table 10 | Active vs. prescribed acquisition crossed with kinematic vs. delayed first-order execution and absent vs. ground-velocity-visible current | `code/run_v40_dynamic_plant_stress.py`; `scripts/postprocess_v40_qualification.py` | `data/tables/dynamic_plant_episode_rows.csv`; `data/tables/v40_publication_arms.csv`; `data/tables/v40_publication_results.json`; `data/tables/v40_interaction_plot.csv` | `dynamic_plant_stress/campaign/` |
+| Table 10, Panel A | Active vs. prescribed acquisition crossed with kinematic vs. delayed first-order execution and absent vs. ground-velocity-visible current | `code/run_v40_dynamic_plant_stress.py`; `scripts/postprocess_v40_qualification.py` | `data/tables/dynamic_plant_episode_rows.csv`; `data/tables/v40_publication_arms.csv`; `data/tables/v40_publication_results.json`; `data/tables/v40_interaction_plot.csv` | `dynamic_plant_stress/campaign/` |
 | Table 11 | Descriptive eight-family closed-loop stress screen; source campaign invalid under its joint runtime gate | `code/run_v35_closed_loop_stress.py`; `code/make_publication_table_closed_loop_stress.py --allow-invalid-descriptive` | `data/tables/closed_loop_stress_episode_rows.csv`; `data/tables/closed_loop_stress_summary.json` | Git provenance bundle: `data/provenance/closed_loop_stress/`; no separate raw archive is required because all 1200 outcome rows are committed |
+| Table 10, Panel B | Delay-unaware proportional tracker vs. delay-aware tracker under delayed first-order execution, without current and with ground-velocity-visible current | `code/run_v41_controller_repair.py`; `scripts/export_v41_controller_repair.py` | `data/tables/controller_repair_episode_rows.csv`; `data/tables/controller_repair_publication_arms.csv`; `data/tables/controller_repair_results.json` | Git provenance bundle: `data/provenance/controller_repair/`; next-DOI raw component: `controller_repair/campaign/` |
 
 The release-validation stack is CPython 3.11.9 with NumPy 2.3.3. The sole
 historical exception in this table map is the frozen V35 campaign behind Table
@@ -42,7 +48,8 @@ mission-geometry generator; it is not a separate evidentiary result.
 | Figure 6 | `fig_source_policy_ablation.pdf` | `code/make_publication_figure_source_policy_ablation.py` | `data/tables/leader_source_policy_episode_rows.csv` |
 | Figure 7 | `fig_source_policy_dynamics.pdf` | `code/make_publication_figure_source_policy_dynamics.py` | DOI component `data/raw/leader_source_ablation/` |
 | Figure 8 | `fig_estimator_history.pdf` | `code/make_publication_figures_v33.py --figure estimator-history` | `data/tables/estimator_benchmark_summary.json` |
-| Figure 9 | `fig_policy_execution_current.pdf` | `scripts/plot_v40_qualification_figure.py` | `data/tables/dynamic_plant_episode_rows.csv`; `data/tables/v40_publication_results.json` |
+| Figure 9(a) | `fig_policy_execution_current.pdf` | `code/make_publication_figure_policy_execution_current.py` | `data/tables/v40_publication_results.json` |
+| Figure 9(b,c) | `fig_policy_execution_current.pdf` | `code/make_publication_figure_policy_execution_current.py` | `data/tables/controller_repair_results.json` |
 
 Install the pinned figure dependency through `requirements-dev.txt` or the
 `figures` project extra. For a headless host, force the noninteractive backend:
@@ -52,7 +59,7 @@ MPLBACKEND=Agg PYTHONPATH=code python code/make_publication_figure_doppler_geome
 MPLBACKEND=Agg PYTHONPATH=code python code/make_publication_figure_full_history_estimator.py
 MPLBACKEND=Agg PYTHONPATH=code python code/make_publication_figure_source_policy_ablation.py
 MPLBACKEND=Agg PYTHONPATH=code python code/make_publication_figures_v33.py --figure estimator-history
-MPLBACKEND=Agg PYTHONPATH=code python scripts/plot_v40_qualification_figure.py
+MPLBACKEND=Agg PYTHONPATH=code python code/make_publication_figure_policy_execution_current.py
 ```
 
 Those commands need only files committed to Git and write under
@@ -78,15 +85,20 @@ changes do not silently enter the public workflow.
 - Tables 6--7: `experiments_v38_leader_source_ablation_replication_48600_48699` (600 paired arm rows).
 - Table 8: `experiments_v27_publication_baselines_dev100` (4000 checkpoint-method JSON records) and `experiments_v34_mhe60_baseline_dev100` (500 MHE records). Complete reruns additionally require the measurement-history archive and the referenced resampling-guard traces.
 - Table 9: `experiments_v39_planner_component_ablation_dev100` (400 arm rows).
-- Table 10: `experiments_v40_dynamic_current_factorial_qualification100` (800 arm rows).
+- Table 10, Panel A: `experiments_v40_dynamic_current_factorial_qualification100` (800 arm rows).
 - Table 11: `experiments_v35_closed_loop_stress_dev100` (1200 arm rows),
   retained as descriptive evidence only. Its frozen decision is `V35_INVALID`
   because 5 optional bias-switch runs exceeded the campaign-wide 2-s runtime
   gate (maximum 2.7017 s); the primary controller cells remained below
   1.49 s. The frozen contract records CPython 3.12.8, NumPy 2.2.1, Gymnasium
   1.2.3, and no Numba.
+- Table 10, Panel B:
+  `experiments_v41p1_controller_repair_qualification100` (400 paired arm
+  rows). It is integrity-valid and complete, but its prespecified composite
+  acceptance gate was not met because the no-current localization-p95
+  non-inferiority margin was exceeded by 0.0669 m.
 
-## Lightweight provenance bundles for Tables 9 and 11
+## Lightweight provenance bundles
 
 The complete row-level outcomes for these two tables are small enough for Git,
 so no separate trace archive is required to verify the printed values. Their
@@ -107,6 +119,12 @@ manifests state `scientific_values_changed: false`. Unchanged summaries and
 decisions retain identical original and exported hashes. In particular, the
 path-sanitized Table 11 records preserve `integrity_valid: false` and
 `V35_INVALID` exactly.
+
+The controller-repair bundle additionally contains
+`public_semantic_audit.json`. It does not change the frozen decision. It records
+the precise state `VALID_COMPLETE__COMPOSITE_ACCEPTANCE_NOT_MET` and limits the
+reserved-seed claim to verified cohort disjointness. See
+`docs/V41_CONTROLLER_REPAIR_AUDIT.md`.
 
 ## Dynamic-response qualification fast path
 
@@ -137,6 +155,37 @@ valid evidence until the postprocessor reports `integrity_valid: true`.
 The staged DOI projection passed this check with exactly 800 JSON records, 800
 NPZ traces, 100 seeds, eight arms per seed, all 14 source hashes matching, and
 decision `V40_QUALIFICATION_COMPLETE`.
+
+## Controller-repair qualification fast path
+
+The committed 400-row CSV is the compact numerical source. The following
+command reconstructs four arm cells and paired effects, checks them against
+the frozen campaign summary, exports path-sanitized provenance, and refuses an
+existing destination:
+
+```bash
+PYTHONPATH=code python scripts/export_v41_controller_repair.py \
+  /path/to/experiments_v41p1_controller_repair_qualification100 \
+  --table-dir /new/output/tables \
+  --provenance-dir /new/output/provenance/controller_repair \
+  --source-root /path/to/frozen/source/root
+```
+
+To build the complete next-version DOI component without altering the private
+campaign:
+
+```bash
+python scripts/project_v41_doi_campaign.py \
+  /path/to/experiments_v41p1_controller_repair_qualification100 \
+  /new/archive/data/raw/controller_repair/campaign \
+  --public-environment-metadata \
+  experiments_v18_1_guard_ablation_dev_3seed/evaluations/\
+dev100_seed_28001_range_45000_45099/metadata.json
+```
+
+The tested projection contains 924 files and changes only the contract's inert
+environment-metadata path. The `v1.0.0` DOI record does not contain this new
+component; publication requires a new data-record version.
 
 ## Estimator benchmark fast path and archive regeneration
 

@@ -11,12 +11,15 @@ ROOT = Path(__file__).resolve().parents[1]
 CODE = ROOT / "code"
 
 MIRRORED_TESTS = (
+    "test_delay_aware_formation_tracker.py",
+    "test_run_v41_controller_repair.py",
     "test_uuv_v27_publication_baselines.py",
     "test_uuv_v28_estimator_stress.py",
     "test_uuv_v34_mhe60_baseline.py",
     "test_uuv_v35_closed_loop_stress.py",
     "test_uuv_v39_planner_component_ablation.py",
     "test_uuv_v40_dynamic_plant_stress.py",
+    "test_uuv_v41_controller_repair.py",
 )
 
 
@@ -78,3 +81,15 @@ def test_frozen_runner_source_preflight_accepts_public_layout(
         sys.path.remove(str(CODE))
     assert expected_key in manifest
 
+
+def test_v41_runner_source_preflight_accepts_public_layout() -> None:
+    sys.path.insert(0, str(CODE))
+    try:
+        module = importlib.import_module("run_v41_controller_repair")
+        manifest = module._source_hashes(CODE, CODE)
+    finally:
+        sys.path.remove(str(CODE))
+    assert "delay_aware_formation_tracker.py" in manifest
+    assert "uuv_v41_controller_repair.py" in manifest
+    assert "run_v41_controller_repair.py" in manifest
+    assert "protocols/EXPERIMENT_PROTOCOL_V41_CONTROLLER_REPAIR.md" in manifest

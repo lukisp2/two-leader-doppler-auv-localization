@@ -1,10 +1,41 @@
 # Release status
 
-This document records the freeze state for version `1.0.0`, tag `v1.0.0`,
-dated `2026-08-31`. The source repository is
+This document records the current freeze state for version `1.1.0`, tag
+`v1.1.0`, dated `2026-09-02`. The source repository is
 <https://github.com/lukisp2/two-leader-doppler-auv-localization>. The software
-record has DOI `10.5281/zenodo.22214022`, and the separate data record has DOI
-`10.5281/zenodo.22214031`.
+record DOI `10.5281/zenodo.22214022` and separate data-record DOI
+`10.5281/zenodo.22214031` identify the preceding immutable `v1.0.0` archives;
+the controller addendum is public in the `v1.1.0` GitHub tag and is not claimed
+to be present in those earlier DOI versions.
+
+## Version 1.1.0 controller-repair update
+
+The reviewer-driven controller-repair addendum is part of `v1.1.0` but not the
+immutable `v1.0.0` tag or its two DOI versions. Its 100-seed, four-arm campaign
+is complete and integrity-valid, but it did not meet every prespecified
+acceptance condition. The unambiguous state is
+`VALID_COMPLETE__COMPOSITE_ACCEPTANCE_NOT_MET`; see
+`docs/V41_CONTROLLER_REPAIR_AUDIT.md`.
+
+- [x] Delay-aware tracker, integration runner, protocol, and component tests
+      are staged.
+- [x] All 400 row-level outcomes, four publication cells, row-derived paired
+      effects, and path-sanitized provenance are staged.
+- [x] The complete-campaign DOI projector was validated on 922 input campaign files;
+      all episode results, traces, tapes, and frozen sources were preserved.
+- [x] Replacement Figure 9 is reproducible from the two compact release JSON
+      files and is pixel-identical to the current manuscript raster.
+- [x] Run the complete archive-connected suite under pinned CPython 3.11.9
+      without Numba and with the full equivalence smoke: 275 tests and 64
+      subtests passed.
+- [x] Freeze manuscript Table 10/Fig. 9 numbering and claims against the
+      compact outputs.
+- [x] Assign source version/tag `1.1.0` / `v1.1.0`.
+- [ ] Create new Zenodo software and data record versions. Until then, cite the
+      `v1.1.0` GitHub tag for the controller addendum and do not attribute it
+      to the `v1.0.0` DOI records.
+- [x] Generate and verify the current clean-tree manifest immediately before
+      tagging; the immutable `v1.0.0` tag retains its historical manifest.
 
 ## Frozen dynamic-response source snapshot
 
@@ -107,10 +138,11 @@ environment for the current source tree and archive-connected tests.
 - [x] Separate version DOIs identify the software
       (`10.5281/zenodo.22214022`) and raw-data
       (`10.5281/zenodo.22214031`) records.
-- [x] `CITATION.cff` contains the software DOI, repository URL,
-      version, and release date. The related data DOI is recorded in the README,
-      release notes, and Zenodo metadata. The article DOI is unavailable until
-      article publication.
+- [x] `CITATION.cff` contains the current repository URL, version, and release
+      date. The README and release notes identify the two DOI records as
+      belonging only to the preceding `v1.0.0` software/data snapshots. The
+      controller addendum has no DOI yet, and the article DOI is unavailable
+      until article publication.
 
 `SHA256SUMS.preliminary` is not part of the release. The authoritative source
 and data archives each contain their own `SHA256SUMS`. Both are generated only

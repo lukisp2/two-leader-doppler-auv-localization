@@ -1,0 +1,32 @@
+{
+  "campaign_completeness": "complete 100-seed paired qualification",
+  "campaign_integrity": "valid",
+  "decision_semantics_note": "The frozen label joins REJECT and INVALID. This campaign is not invalid: all integrity checks passed. It is a valid complete qualification that did not meet every prespecified acceptance condition.",
+  "failed_prespecified_condition": {
+    "criterion": "terminal localization median and p95 each no more than 0.50 m above reference",
+    "current": "no_current",
+    "excess_over_margin_m": 0.06686098628448289,
+    "margin_m": 0.5,
+    "reference_p95_m": 0.993153907034716,
+    "treatment_minus_reference_p95_m": 0.5668609862844829,
+    "treatment_p95_m": 1.5600148933191988
+  },
+  "legacy_artifacts_modified": false,
+  "legacy_decision_label": "CONTROLLER_REPAIR_REJECT_OR_INVALID",
+  "prespecified_composite_acceptance": "not_met",
+  "public_unambiguous_decision_label": "VALID_COMPLETE__COMPOSITE_ACCEPTANCE_NOT_MET",
+  "reserved_seed_marker_audit": {
+    "correct_semantics": "reserved range marker and runner exclusion rule; not proof that no earlier external process ever inspected the range",
+    "global_never_opened_claim_made": false,
+    "legacy_fields": [
+      "final_holdout_sealed",
+      "sealed_seed_range_untouched"
+    ],
+    "stored_value": [
+      50000,
+      50999
+    ],
+    "verified_here": "all selected qualification seeds are 51000--51099 and are disjoint from the reserved range 50000--50999"
+  },
+  "schema_version": 1
+}

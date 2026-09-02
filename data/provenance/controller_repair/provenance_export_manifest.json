@@ -1,0 +1,39 @@
+{
+  "campaign_name": "experiments_v41p1_controller_repair_qualification100",
+  "files": [
+    {
+      "exported_sha256": "654a0e2f5d39d169d6aa5952e6f0e0e921666c716b2b92cd791255c9b6f81a8f",
+      "original_sha256": "471dd2c8b29c1f20f0001f54fafabf96801ccd511c751d68eda2a9defd20116f",
+      "relative_path": "control/campaign_contract.json",
+      "scientific_values_changed": false,
+      "source_root_replacements": 1
+    },
+    {
+      "exported_sha256": "efec61437c3edd51aba4724face03cca3bd2d04024bf41612ca86a70d214191a",
+      "original_sha256": "efec61437c3edd51aba4724face03cca3bd2d04024bf41612ca86a70d214191a",
+      "relative_path": "campaign_summary.json",
+      "scientific_values_changed": false,
+      "source_root_replacements": 0
+    },
+    {
+      "exported_sha256": "c6fcb2104907c677e33e2087e744b76672493581bafacd7058e8afe18a220dd3",
+      "original_sha256": "c6fcb2104907c677e33e2087e744b76672493581bafacd7058e8afe18a220dd3",
+      "relative_path": "decision.json",
+      "scientific_values_changed": false,
+      "source_root_replacements": 0
+    },
+    {
+      "exported_sha256": "7c94d616230ae6a161fe0821793a9612aab95fbda0a32bc9a89f6bffa6394fc3",
+      "kind": "additive public interpretation; frozen artifacts unchanged",
+      "original_sha256": null,
+      "relative_path": "public_semantic_audit.json",
+      "scientific_values_changed": false,
+      "source_root_replacements": 0
+    }
+  ],
+  "only_frozen_record_transformation": "literal source-root path replacement",
+  "schema_version": 1,
+  "scientific_values_changed": false,
+  "semantic_audit_is_additive": true,
+  "source_root_token": "${FROZEN_SOURCE_ROOT}"
+}

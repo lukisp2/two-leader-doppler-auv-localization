@@ -1,4 +1,54 @@
-# Version 1.0.0 release notes
+# Release notes
+
+## Version 1.1.0 — controller-only follow-up (2026-09-02)
+
+This release provides the reviewer-requested repair of post-TRACK
+control under the delayed first-order plant. It does not alter the estimator,
+active-acquisition planner, evidence-qualified gate, plant, horizon, or success
+definitions. It adds a deterministic Smith-predictor-based tracker with a
+causal reference governor, bumpless ACQUIRE-to-TRACK transfer, and command slew
+limits. The earlier stateless proportional tracker remains the paired
+reference.
+
+The frozen 100-seed, four-arm qualification is complete and integrity-valid.
+Terminal joint success changed from 38% to 95% without current and from 26% to
+95% with ground-velocity-visible current. Tail80 joint success changed from 2%
+to 91% and from 6% to 92%, respectively. There were no reference-only
+discordant successes, no truth-audited unsafe TRACK events, and strong
+reductions in post-TRACK saturation and command curvature.
+
+The result did not satisfy the complete prespecified composite acceptance gate. In the
+no-current condition, localization p95 increased from 0.9932 m to 1.5600 m;
+the 0.5669-m difference exceeded the frozen 0.50-m margin by 0.0669 m. The
+correct release interpretation is therefore
+`VALID_COMPLETE__COMPOSITE_ACCEPTANCE_NOT_MET`, not an unqualified pass. The
+original runner label `CONTROLLER_REPAIR_REJECT_OR_INVALID` is retained as
+historical provenance and is not silently rewritten.
+
+Added material includes:
+
+- the three-file controller/runner implementation and frozen protocol;
+- component, integration, export, and DOI-projection tests;
+- all 400 row-level outcomes and a four-cell publication table;
+- row-derived paired results and source hashes;
+- path-sanitized contract, summary, decision, and additive semantic audit;
+- a tested complete-campaign DOI projector with fixed 400/400/100/15
+  JSON/trace/tape/source cardinalities.
+
+The inherited reserved-range markers are also clarified: they verify that the
+selected 51000--51099 cohort is disjoint from reserved range 50000--50999 and
+that the runner excludes that range. They are not global proof that no earlier
+external process ever inspected it.
+
+This material is released in immutable GitHub tag `v1.1.0`. It is not
+contained in tag `v1.0.0` or its version-specific Zenodo records. A validated
+projector prepares the complete controller campaign for a future data-record
+version without changing the frozen source artifacts. The final
+archive-connected validation, with the optional full baseline-equivalence
+smoke enabled and Numba unavailable, reported 275 passed tests and 64 passed
+subtests.
+
+## Version 1.0.0
 
 This archival release accompanies the resubmission of *Active Follower
 Localization Using Two-Leader Doppler Measurements for 3-D Autonomous

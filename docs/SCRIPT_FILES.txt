@@ -2,6 +2,7 @@
 check_source_inventory.py
 export_estimator_benchmark.py
 export_campaign_provenance.py
+export_v41_controller_repair.py
 export_v18_replay_fixture.py
 generate_sha256_manifest.py
 plot_v40_qualification_figure.py
@@ -9,5 +10,6 @@ postprocess_v40_qualification.py
 prepare_v27_public_archive.py
 project_doi_archive_paths.py
 project_v40_doi_campaign.py
+project_v41_doi_campaign.py
 verify_environment.py
 verify_sha256_manifest.py

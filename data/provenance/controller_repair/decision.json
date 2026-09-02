@@ -1,0 +1,66 @@
+{
+  "acceptance_pass": false,
+  "acceptance_screens_by_current": {
+    "bottom_track_visible": {
+      "checks": {
+        "localization_noninferior": true,
+        "paired_tail80_gain": true,
+        "paired_terminal_gain": true,
+        "post_track_action_curvature_reduced": true,
+        "post_track_saturation_reduced": true,
+        "repaired_tail80_success": true,
+        "repaired_terminal_success": true,
+        "track_metric_pair_coverage": true,
+        "zero_unsafe_track": true
+      },
+      "observed": {
+        "action_curvature_paired_mean_difference": -0.523630931574205,
+        "localization_median_baseline_m": 0.4828819329030113,
+        "localization_median_repaired_m": 0.6385771635558737,
+        "localization_p95_baseline_m": 1.0175554758005871,
+        "localization_p95_repaired_m": 1.2845827949323245,
+        "paired_tail80_success_gain": 0.86,
+        "paired_terminal_success_gain": 0.69,
+        "repaired_tail80_success_rate": 0.92,
+        "repaired_terminal_success_rate": 0.95,
+        "saturation_fraction_paired_mean_difference": -0.9057641219377014,
+        "valid_track_metric_pairs": 100
+      },
+      "pass": true
+    },
+    "no_current": {
+      "checks": {
+        "localization_noninferior": false,
+        "paired_tail80_gain": true,
+        "paired_terminal_gain": true,
+        "post_track_action_curvature_reduced": true,
+        "post_track_saturation_reduced": true,
+        "repaired_tail80_success": true,
+        "repaired_terminal_success": true,
+        "track_metric_pair_coverage": true,
+        "zero_unsafe_track": true
+      },
+      "observed": {
+        "action_curvature_paired_mean_difference": -0.5274515816054911,
+        "localization_median_baseline_m": 0.44863190036901823,
+        "localization_median_repaired_m": 0.619256321959844,
+        "localization_p95_baseline_m": 0.993153907034716,
+        "localization_p95_repaired_m": 1.5600148933191988,
+        "paired_tail80_success_gain": 0.89,
+        "paired_terminal_success_gain": 0.57,
+        "repaired_tail80_success_rate": 0.91,
+        "repaired_terminal_success_rate": 0.95,
+        "saturation_fraction_paired_mean_difference": -0.9130183890114819,
+        "valid_track_metric_pairs": 100
+      },
+      "pass": false
+    }
+  },
+  "decision": "CONTROLLER_REPAIR_REJECT_OR_INVALID",
+  "final_holdout_sealed": [
+    50000,
+    50999
+  ],
+  "integrity_valid": true,
+  "retuning_allowed": false
+}

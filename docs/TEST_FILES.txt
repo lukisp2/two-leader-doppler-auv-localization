@@ -1,6 +1,8 @@
 # Copy into tests/ without renaming after the source freeze.
 test_audit_v38_vertical_datum.py
+test_delay_aware_formation_tracker.py
 test_export_estimator_benchmark.py
+test_export_v41_controller_repair.py
 test_export_campaign_provenance.py
 test_make_publication_table_planner_component_ablation.py
 test_plot_v40_qualification_figure.py
@@ -8,10 +10,12 @@ test_postprocess_v40_qualification.py
 test_prepare_v27_public_archive.py
 test_project_doi_archive_paths.py
 test_project_v40_doi_campaign.py
+test_project_v41_doi_campaign.py
 test_public_release_layout.py
 test_publication_figure_scripts.py
 test_publication_table_generators.py
 test_run_v19_observability_benchmark.py
+test_run_v41_controller_repair.py
 test_run_v38_leader_source_ablation_replication.py
 test_sha256_manifest_tools.py
 test_uuv_v11_rng.py
@@ -30,3 +34,4 @@ test_uuv_v35_closed_loop_stress.py
 test_uuv_v38_leader_source_ablation.py
 test_uuv_v39_planner_component_ablation.py
 test_uuv_v40_dynamic_plant_stress.py
+test_uuv_v41_controller_repair.py

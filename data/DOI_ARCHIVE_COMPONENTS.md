@@ -83,3 +83,22 @@ must retain its explicit descriptive-only status because the source campaign
 failed the prespecified joint runtime gate. A future deposit may include the
 larger traces for provenance, but the release does not promise or depend on an
 uninventoried `planner_component_ablation/` or `closed_loop_stress/` archive.
+
+## Controller-repair addendum for the next data version
+
+This component was generated after version `1.0.0` and is therefore **not**
+covered by DOI `10.5281/zenodo.22214031`. It must be attached to the next
+version of the data record.
+
+| DOI destination | Frozen source-relative path | Files | Bytes | Contents |
+|---|---|---:|---:|---|
+| `data/raw/controller_repair/campaign/` | `code/experiments_v41p1_controller_repair_qualification100/` | 924 after projection | approximately 86 MB before archive-container overhead | 400 episode-result JSON files, 400 trajectory NPZ files, 100 shared noise tapes, 15 frozen source files, frozen control/summary records, approved public environment metadata, and `public_projection_manifest.json` |
+
+The private campaign has 922 files. The tested projection adds public
+environment metadata and its manifest. Only the contract's inert
+`environment_metadata_path` changes; the other 921 campaign files are
+byte-for-byte preserved. Git separately contains the complete 400-row outcome
+CSV, four compact arm cells, row-derived paired results, and a path-sanitized
+provenance bundle. The raw projection preserves the frozen ambiguous decision
+label; `docs/V41_CONTROLLER_REPAIR_AUDIT.md` gives its unambiguous public
+interpretation without changing historical bytes.

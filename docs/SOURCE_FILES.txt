@@ -11,10 +11,12 @@ audit_v38_vertical_datum.py
 audit_v39_planner_component_ablation.py
 audit_v40_dynamic_plant_stress.py
 baseline_controllers_v11.py
+delay_aware_formation_tracker.py
 make_publication_figure_doppler_geometry.py
 make_publication_figure_full_history_estimator.py
 make_publication_figure_mission_geometry.py
 make_publication_figure_paired_episode.py
+make_publication_figure_policy_execution_current.py
 make_publication_figure_source_policy_ablation.py
 make_publication_figure_source_policy_dynamics.py
 make_publication_figures_v33.py
@@ -35,6 +37,7 @@ run_v38_leader_source_ablation.py
 run_v38_leader_source_ablation_replication.py
 run_v39_planner_component_ablation.py
 run_v40_dynamic_plant_stress.py
+run_v41_controller_repair.py
 uuv_3d_render_pygame.py
 uuv_v8_temporal_infofix.py
 uuv_v10_info_tracking.py
@@ -63,3 +66,4 @@ uuv_v35_closed_loop_stress.py
 uuv_v38_leader_source_ablation.py
 uuv_v39_planner_component_ablation.py
 uuv_v40_dynamic_plant_stress.py
+uuv_v41_controller_repair.py
