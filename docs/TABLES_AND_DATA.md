@@ -5,7 +5,7 @@ The preceding `v1.0.0` raw archive is identified by data DOI
 identified by DOI `10.5281/zenodo.22214022`. The current source, compact data,
 and controller addendum are public at
 <https://github.com/lukisp2/two-leader-doppler-auv-localization> under tag
-`v1.1.0`; they are not attributed to the earlier DOI records.
+`v1.1.1`; they are not attributed to the earlier DOI records.
 
 Internal campaign identifiers below are provenance labels only. The manuscript
 refers to methods and experiments descriptively. The item numbers below match

@@ -1,11 +1,15 @@
 # Source provenance and release boundary
 
-This provenance record accompanies source version `1.1.0` at
+This provenance record accompanies source version `1.1.1` at
 <https://github.com/lukisp2/two-leader-doppler-auv-localization>. The software
 record DOI `10.5281/zenodo.22214022` and separate data-record DOI
 `10.5281/zenodo.22214031` archive the preceding immutable `v1.0.0` release.
 The controller addendum is public in GitHub tag `v1.1.0` and is not attributed
 to those earlier DOI versions.
+
+Version `1.1.1` changes only Figure 4 annotation placement, the Figure 6
+outcome title, and release metadata. Simulation sources and numerical
+artifacts retain their `v1.1.0` contents.
 
 The research working directory is part of a larger workspace containing
 unrelated and work-in-progress material. This public repository is therefore a

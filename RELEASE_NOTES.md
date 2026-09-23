@@ -1,5 +1,19 @@
 # Release notes
 
+## Version 1.1.1 — final figure presentation (2026-09-23)
+
+This patch aligns the public generators with the final manuscript figures.
+Figure 4 anchors the refinement annotation to the curved refinement arrow,
+moves the nominal-radius label clear of the contours, and clarifies the
+primary-solution caption. Figure 6 names its joint-success outcome explicitly.
+Simulation code, protocols, numerical results, and scientific conclusions are
+unchanged from `v1.1.0`.
+
+Both affected figures were regenerated with CPython 3.11.9, NumPy 2.3.3,
+and Matplotlib 3.10.6; raster comparisons match the manuscript figures
+pixel for pixel. The source manifest was regenerated and verified.
+The immutable `v1.1.0` tag and the `v1.0.0` Zenodo records remain unchanged.
+
 ## Version 1.1.0 — controller-only follow-up (2026-09-02)
 
 This release provides the reviewer-requested repair of post-TRACK

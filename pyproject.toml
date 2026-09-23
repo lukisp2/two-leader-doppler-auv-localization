@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "two-leader-doppler-auv-localization"
-version = "1.1.0"
+version = "1.1.1"
 description = "Reference implementation for active two-leader Doppler localization and acquire-to-track formation control."
 readme = "README.md"
 requires-python = "==3.11.9"

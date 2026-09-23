@@ -20,12 +20,15 @@ This is simulation research code. It is **not** certified guidance, navigation, 
 ## Release identifiers
 
 - source repository: <https://github.com/lukisp2/two-leader-doppler-auv-localization>;
-- current version and tag: `1.1.0` / `v1.1.0`;
-- release date: `2026-09-02`;
+- current version and tag: `1.1.1` / `v1.1.1`;
+- release date: `2026-09-23`;
 - preceding software archive (`v1.0.0`): <https://doi.org/10.5281/zenodo.22214022>;
 - preceding raw-data archive (`v1.0.0`): <https://doi.org/10.5281/zenodo.22214031>.
 
-The immutable Zenodo records correspond to `v1.0.0`. The current `v1.1.0`
+Version `v1.1.1` updates only the presentation of Figures 4 and 6 to match
+the final manuscript. Scientific code and result data are unchanged.
+
+The immutable Zenodo records correspond to `v1.0.0`. The preceding `v1.1.0`
 GitHub tag adds the delay-aware controller, the frozen controller-only
 qualification protocol, 400 row-level outcomes, compact paired results,
 provenance, tests, and Table 10/Fig. 9 regeneration. Those additions are
@@ -165,7 +168,7 @@ records the precise interpretation
 ## Citation
 
 Use the metadata in [CITATION.cff](CITATION.cff) for the current GitHub tag
-`v1.1.0`. DOI `10.5281/zenodo.22214022` identifies only the preceding
+`v1.1.1`. DOI `10.5281/zenodo.22214022` identifies only the preceding
 `v1.0.0` software snapshot, and DOI `10.5281/zenodo.22214031` identifies its
 separate raw-data archive; neither DOI contains the controller addendum. The
 journal DOI will be added after article publication.

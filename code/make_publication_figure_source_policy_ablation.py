@@ -788,7 +788,7 @@ def make_figure(
         xticks=source_x,
         xticklabels=[SOURCE_LABELS[source] for source in SOURCE_ORDER],
     )
-    axes[0, 1].set_title("(b) Nominal task outcomes")
+    axes[0, 1].set_title("(b) Nominal joint-success rates")
     axes[0, 1].grid(True, axis="y", alpha=0.22, color=GRID_COLOR, zorder=0)
     axes[0, 1].legend(
         handles=[

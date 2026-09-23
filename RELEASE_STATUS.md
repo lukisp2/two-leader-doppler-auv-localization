@@ -1,12 +1,19 @@
 # Release status
 
-This document records the current freeze state for version `1.1.0`, tag
-`v1.1.0`, dated `2026-09-02`. The source repository is
+This document records the current freeze state for version `1.1.1`, tag
+`v1.1.1`, dated `2026-09-23`. The source repository is
 <https://github.com/lukisp2/two-leader-doppler-auv-localization>. The software
 record DOI `10.5281/zenodo.22214022` and separate data-record DOI
 `10.5281/zenodo.22214031` identify the preceding immutable `v1.0.0` archives;
 the controller addendum is public in the `v1.1.0` GitHub tag and is not claimed
 to be present in those earlier DOI versions.
+
+## Version 1.1.1 figure-presentation patch
+
+The Figure 4 annotation placement and Figure 6 outcome title now match the
+final manuscript. Both generators were rerun with the pinned figure stack.
+The source manifest covers this patch; all simulation code and result data
+retain their `v1.1.0` contents.
 
 ## Version 1.1.0 controller-repair update
 

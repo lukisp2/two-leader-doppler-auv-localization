@@ -1,8 +1,8 @@
 # Reproducibility guide
 
-Current version `1.1.0` uses source repository
+Current version `1.1.1` uses source repository
 <https://github.com/lukisp2/two-leader-doppler-auv-localization> and tag
-`v1.1.0`. Software DOI `10.5281/zenodo.22214022` and raw-data DOI
+`v1.1.1`. Software DOI `10.5281/zenodo.22214022` and raw-data DOI
 `10.5281/zenodo.22214031` identify only the preceding immutable `v1.0.0`
 archives; they do not contain the controller addendum.
 

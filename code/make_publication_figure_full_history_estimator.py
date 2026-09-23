@@ -126,7 +126,7 @@ def shell_points(n: int, shift: float) -> np.ndarray:
     return np.column_stack((radii * np.cos(angles), radii * np.sin(angles)))
 
 
-def search_panel(ax: plt.Axes) -> None:
+def search_panel(ax: plt.Axes):
     panel_title(ax, r"(b) Broad support search and local refinement")
     ax.set_xlim(-1.55, 1.55)
     ax.set_ylim(-1.47, 1.47)
@@ -181,6 +181,7 @@ def search_panel(ax: plt.Axes) -> None:
 
     minima = np.array([[-0.66, 0.63], [0.72, -0.53], [0.76, 0.50]])
     selected_sources = [points_1[4], points_2[12], points_1[19]]
+    refinement_arrows = []
     for source, target in zip(selected_sources, minima):
         ax.scatter(
             source[0],
@@ -192,8 +193,7 @@ def search_panel(ax: plt.Axes) -> None:
             linewidth=0.75,
             zorder=5,
         )
-        ax.add_patch(
-            FancyArrowPatch(
+        refinement = FancyArrowPatch(
                 source,
                 target,
                 arrowstyle="-|>",
@@ -202,7 +202,8 @@ def search_panel(ax: plt.Axes) -> None:
                 lw=0.9,
                 color=GRAY,
             )
-        )
+        ax.add_patch(refinement)
+        refinement_arrows.append(refinement)
         ax.add_patch(Ellipse(target, 0.26, 0.14, angle=28, fill=False,
                              ec=GRAY, lw=0.75, alpha=0.75))
         ax.scatter(*target, marker="*", s=42, color=DARK, edgecolor="white",
@@ -218,16 +219,21 @@ def search_panel(ax: plt.Axes) -> None:
         color=DARK,
         fontsize=5.4,
     )
-    ax.annotate(
+    # Anchor to the actual quadratic Bezier shaft, not its straight chord.
+    shaft = refinement_arrows[1].get_path().vertices[:3]
+    refinement_anchor = 0.25 * shaft[0] + 0.5 * shaft[1] + 0.25 * shaft[2]
+    refinement_note = ax.annotate(
         "constrained local refinement",
-        xy=tuple((selected_sources[1] + minima[1]) / 2),
+        xy=tuple(refinement_anchor),
         xytext=(-0.16, -1.35),
         ha="center",
         va="center",
         color=GRAY,
         fontsize=6.2,
-        arrowprops={"arrowstyle": "-", "color": GRAY, "lw": 0.55},
+        arrowprops={"arrowstyle": "-", "color": GRAY, "lw": 0.55,
+                    "shrinkB": 0},
     )
+    return refinement_arrows[1], refinement_note
 
 
 def diagnostic_panel(ax: plt.Axes) -> None:
@@ -237,7 +243,7 @@ def diagnostic_panel(ax: plt.Axes) -> None:
     ax.set_aspect("equal")
     ax.axis("off")
 
-    primary = np.array([0.72, 0.65])
+    primary = np.array([0.72, 0.80])
     alternative = np.array([3.58, 1.48])
     for center, widths, angle, color in [
         (primary, [(1.34, 0.76), (0.92, 0.50), (0.54, 0.28)], 24, GREEN),
@@ -337,15 +343,16 @@ def diagnostic_panel(ax: plt.Axes) -> None:
             color=GREEN,
         )
     )
-    local_radius_midpoint = (primary + local_radius_end) / 2
-    ax.text(
-        local_radius_midpoint[0] + 0.02,
-        local_radius_midpoint[1] + 0.11,
+    # Label outside all contours; leader meets the radial arrow tip.
+    ax.annotate(
         r"$r_{\mathrm{nom}}$",
+        xy=local_radius_end,
+        xytext=(1.84, 1.27),
         color=GREEN,
         ha="center",
         va="bottom",
-        bbox={"boxstyle": "square,pad=0.04", "fc": "white", "ec": "none"},
+        arrowprops={"arrowstyle": "-", "color": GREEN, "lw": 0.55,
+                    "shrinkB": 0},
     )
     ax.text(
         1.58,
@@ -368,7 +375,7 @@ def diagnostic_panel(ax: plt.Axes) -> None:
     ax.text(
         0.08,
         1.86,
-        "schematic local-curvature\ncontour for the primary basin",
+        "local-curvature contour\nat the primary solution",
         color=GREEN,
         ha="left",
         va="center",
@@ -400,9 +407,13 @@ def build(output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     fig, axes = plt.subplots(1, 3, figsize=(7.16, 2.48), gridspec_kw={"wspace": 0.12})
     trajectory_panel(axes[0])
-    search_panel(axes[1])
+    refinement_arrow, refinement_note = search_panel(axes[1])
     diagnostic_panel(axes[2])
     fig.subplots_adjust(left=0.012, right=0.993, bottom=0.035, top=0.88)
+    # Resolve the annotation after the final equal-aspect display transform.
+    fig.canvas.draw()
+    shaft = refinement_arrow.get_path().vertices[:3]
+    refinement_note.xy = tuple(0.25 * shaft[0] + 0.5 * shaft[1] + 0.25 * shaft[2])
 
     stem = output_dir / "figure4_full_history_estimator"
     fig.savefig(stem.with_suffix(".pdf"), bbox_inches="tight", pad_inches=0.015)
