@@ -1,5 +1,23 @@
 # Release status
 
+## Version 1.2.0 source and compact-data release (2026-11-02)
+
+The difficult-start results, protocol, portable reproduction adapter and
+compact records are included in source tag `v1.2.0`. The path-sanitized complete
+raw-campaign export is prepared separately, with asset upload pending. This is
+an additive data/reproducibility update; no estimator, planner, gate or
+controller parameters were changed. The new experiment is descriptive, with
+48/50 terminal and 46/50 Tail80 success for delay-aware tracking, not an
+unqualified safety or convergence claim. See `docs/IET_REVISION_20261102.md`.
+
+- New no-simulation unit checks: 8 passed (CPython 3.11.9 / NumPy 2.3.3).
+- Independent audit of exported raw traces: PASS, 100/100, no discrepancies.
+- The source manifest covers the tagged source and compact records only.
+- The separate raw-data asset upload and unauthenticated download verification
+  are pending; no new Zenodo DOI is assigned.
+
+## Historical release status
+
 This document records the current freeze state for version `1.1.1`, tag
 `v1.1.1`, dated `2026-09-23`. The source repository is
 <https://github.com/lukisp2/two-leader-doppler-auv-localization>. The software

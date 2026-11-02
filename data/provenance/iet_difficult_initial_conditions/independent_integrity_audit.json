@@ -1,0 +1,318 @@
+{
+  "checks": 8062,
+  "passed": true,
+  "issues": [],
+  "source_files": 27,
+  "screened_initial_conditions": 1000,
+  "eligible_conditions": 57,
+  "paired_scenarios": 50,
+  "runs": 100,
+  "source_selection_and_noise_hashes_verified": true,
+  "pairs": [
+    {
+      "seed": 52009,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52014,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52023,
+      "pretrack_actions": 92,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52028,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52031,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52033,
+      "pretrack_actions": 48,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52039,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52042,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52043,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52046,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52051,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52053,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52095,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52131,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52138,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52143,
+      "pretrack_actions": 35,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52154,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52155,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52187,
+      "pretrack_actions": 32,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52220,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52235,
+      "pretrack_actions": 32,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52244,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52272,
+      "pretrack_actions": 92,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52284,
+      "pretrack_actions": 32,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52285,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52297,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52313,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52318,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52328,
+      "pretrack_actions": 32,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52336,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52362,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52365,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52403,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52427,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52434,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52502,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52505,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52526,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52620,
+      "pretrack_actions": 92,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52633,
+      "pretrack_actions": 34,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52641,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52644,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52648,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52668,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52757,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52793,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52812,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52819,
+      "pretrack_actions": 92,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52839,
+      "pretrack_actions": 47,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    },
+    {
+      "seed": 52858,
+      "pretrack_actions": 62,
+      "fields_checked": 56,
+      "online_fields_checked": 7
+    }
+  ],
+  "limits": [
+    "Stored initial geometries independently recomputed; RNG generator itself not independently reimplemented.",
+    "Pre-campaign freshness uses its recorded bounded audit, not a claim about every possible external archive.",
+    "These checks do not establish field robustness or global convergence."
+  ]
+}

@@ -12,6 +12,8 @@ test_project_doi_archive_paths.py
 test_project_v40_doi_campaign.py
 test_project_v41_doi_campaign.py
 test_public_release_layout.py
+test_iet_difficult_initial_conditions.py
+test_iet_revision_release.py
 test_publication_figure_scripts.py
 test_publication_table_generators.py
 test_run_v19_observability_benchmark.py

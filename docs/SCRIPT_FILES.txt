@@ -13,3 +13,6 @@ project_v40_doi_campaign.py
 project_v41_doi_campaign.py
 verify_environment.py
 verify_sha256_manifest.py
+analyze_historical_initial_conditions.py
+audit_iet_difficult_outcomes.py
+project_iet_revision_campaign.py

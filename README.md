@@ -20,13 +20,18 @@ This is simulation research code. It is **not** certified guidance, navigation, 
 ## Release identifiers
 
 - source repository: <https://github.com/lukisp2/two-leader-doppler-auv-localization>;
-- current version and tag: `1.1.1` / `v1.1.1`;
-- release date: `2026-09-23`;
+- source version and tag: `1.2.0` / `v1.2.0`;
+- source release date: `2026-11-02`;
+- preceding published version: `v1.1.1` (`2026-09-23`);
 - preceding software archive (`v1.0.0`): <https://doi.org/10.5281/zenodo.22214022>;
 - preceding raw-data archive (`v1.0.0`): <https://doi.org/10.5281/zenodo.22214031>.
 
-Version `v1.1.1` updates only the presentation of Figures 4 and 6 to match
-the final manuscript. Scientific code and result data are unchanged.
+Version `v1.2.0` adds the frozen difficult-initial-condition comparison and the
+descriptive initial-condition reanalysis. It does not change the estimator,
+planner, gate or either controller. See
+[docs/IET_REVISION_20261102.md](docs/IET_REVISION_20261102.md) for results,
+limitations, raw-data packaging and portable reproduction commands.
+Version `v1.1.1` changed only figure presentation.
 
 The immutable Zenodo records correspond to `v1.0.0`. The preceding `v1.1.0`
 GitHub tag adds the delay-aware controller, the frozen controller-only
@@ -34,6 +39,11 @@ qualification protocol, 400 row-level outcomes, compact paired results,
 provenance, tests, and Table 10/Fig. 9 regeneration. Those additions are
 public in Git but are not claimed to be present in the earlier DOI records.
 A validated projector is provided for a future versioned raw-trace deposit.
+The tagged source includes all 100 row-level difficult-start outcomes and
+their provenance. The complete raw campaign is prepared separately as
+`iet-difficult-initial-conditions-v1.2.0.zip`; its release-asset upload is
+pending. It is not contained in either preceding Zenodo record. The raw asset
+is not claimed as publicly downloadable until that upload is verified.
 
 ## Release-validation environment
 
@@ -120,6 +130,8 @@ are documented in
 The paired post-TRACK controller repair, its one failed composite acceptance
 condition, and the corrected decision/seed-marker semantics are documented in
 [docs/V41_CONTROLLER_REPAIR_AUDIT.md](docs/V41_CONTROLLER_REPAIR_AUDIT.md).
+The additional difficult-start comparison and its independent raw-trace audit
+are documented in [docs/IET_REVISION_20261102.md](docs/IET_REVISION_20261102.md).
 
 ## Data policy
 
@@ -167,11 +179,12 @@ records the precise interpretation
 
 ## Citation
 
-Use the metadata in [CITATION.cff](CITATION.cff) for the current GitHub tag
-`v1.1.1`. DOI `10.5281/zenodo.22214022` identifies only the preceding
+Use the metadata in [CITATION.cff](CITATION.cff) for source tag `v1.2.0`.
+DOI `10.5281/zenodo.22214022` identifies only the preceding
 `v1.0.0` software snapshot, and DOI `10.5281/zenodo.22214031` identifies its
 separate raw-data archive; neither DOI contains the controller addendum. The
-journal DOI will be added after article publication.
+journal DOI will be added after article publication. Source-tag availability
+does not imply availability of a separately uploaded raw-data asset.
 
 ## License
 

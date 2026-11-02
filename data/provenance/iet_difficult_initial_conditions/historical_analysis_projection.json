@@ -1,0 +1,17 @@
+{
+  "scientific_values_changed": false,
+  "verified_episode_arm_records": 1000,
+  "transformation": "Portable analyzer rerun on the same raw inputs; source path labels and analyzer source hash differ. Every scientific record and aggregate matches the original reanalysis.",
+  "files": [
+    {
+      "path": "data/tables/initial_condition_analysis.json",
+      "original_sha256": "c18a230c3a03ae0251a5c053927686079752ac296138b57a45cfa5419a5cde7d",
+      "public_sha256": "28754827fd9e61eca3523f39ae9ba7a2256117ed6327bbe14e3401a118007e72"
+    },
+    {
+      "path": "data/tables/initial_condition_episode_rows.json",
+      "original_sha256": "78b4dda3225b92bb4f5ca4cb47fcf72d9f55c628cbcb78d69f0807a462ccbb7a",
+      "public_sha256": "53e3de47932b5ec580318591511900c1d6bf4227e3bac8c99f0a9482c012ff1c"
+    }
+  ]
+}

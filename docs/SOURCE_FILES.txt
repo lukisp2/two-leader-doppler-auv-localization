@@ -67,3 +67,4 @@ uuv_v38_leader_source_ablation.py
 uuv_v39_planner_component_ablation.py
 uuv_v40_dynamic_plant_stress.py
 uuv_v41_controller_repair.py
+run_iet_difficult_initial_conditions.py

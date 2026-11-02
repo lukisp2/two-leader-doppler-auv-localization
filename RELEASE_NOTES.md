@@ -1,5 +1,32 @@
 # Release notes
 
+## Version 1.2.0 — difficult initial conditions (2026-11-02)
+
+This additive revision leaves all earlier scientific implementations and
+outcomes unchanged. It adds a prospective 50-scenario, two-controller test
+with initial formation error at least 350 m and heading misalignment at least
+120 degrees, within the original correct prior. Scenarios were selected from
+initial states alone before outcome evaluation; all 100 runs are retained.
+
+Under the same delayed first-order plant without current, terminal/Tail80/
+Dwell15 successes were 22/2/1 out of 50 for the proportional reference and
+48/46/48 for the unchanged delay-aware controller. All terminal localization
+errors were below 7 m. Two delay-aware terminal failures remain; all four
+Tail80 failures first entered TRACK at 184 s. This is a descriptive stress
+comparison, not a new formal qualification or a global-convergence guarantee.
+
+The source update includes a portable explicit replication adapter, protocol,
+100 row-level outcomes, all 1000 screened initial states, source/selection
+provenance, tests and a raw-trace audit. A separate 1000-record descriptive
+reanalysis of the prior campaigns is also included. The complete new raw
+campaign is exported as a separately checksummed release asset; all 250 raw
+JSON/NPZ result/trace/noise files are byte-identical to their originals.
+Three inert path/provenance files are projected with original/public hashes.
+No new DOI is claimed. The source and compact records are included in tag
+`v1.2.0`; upload and download verification of the separate raw-data release
+asset remain pending. Tagged source availability is not an assertion that the
+raw-data asset has already been published.
+
 ## Version 1.1.1 — final figure presentation (2026-09-23)
 
 This patch aligns the public generators with the final manuscript figures.

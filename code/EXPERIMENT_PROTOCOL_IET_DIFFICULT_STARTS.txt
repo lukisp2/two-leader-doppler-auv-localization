@@ -1,0 +1,69 @@
+IET RSN-2026-10-0375 revision experiment: difficult initial formation conditions
+Protocol version 1.0, specified 2026-11-02 before any new simulation outcome.
+This is a reviewer-requested supplementary stress evaluation, not a replacement
+of the previously frozen 100-scenario campaigns or a formal qualification test.
+
+Question
+How do the unchanged proportional and delay-aware post-release controllers
+perform in the complete acquisition-to-tracking loop from large initial
+formation errors and large heading misalignment within the stated domain?
+
+Selection (independent of all outcomes)
+Use the original frozen nominal initialization and prior, including follower
+distance 120-350 m from the initial leader centroid. Reconstruct or sample only
+the initial state for seeds 52000-52999 in ascending order. Retain the first 50
+seeds satisfying BOTH:
+  norm(pF(0)-pF_des(0)) >= 350 m;
+  abs(wrap180(yawF(0)-atan2(vC_y,vC_x))) >= 120 degrees.
+The desired point is the original point 120 m behind the leader centroid.
+Retain the full screened seed list and initial geometry. No simulation outcome
+or estimated lock time participates in selection. If fewer than 50 qualify,
+stop before campaign execution and revise the prospective design explicitly.
+Check the available prior experiment records for selected-seed reuse; abort if
+any selected seed is known to have been evaluated. The sealed 50000-50999 range
+is prohibited. Smoke checks use only the previously opened seed 49566 and/or
+49591 and are not included among the 50 stress scenarios.
+
+Paired arms: 50 scenarios x 2 controllers = 100 complete episodes
+  A: the unchanged baseline proportional tracker;
+  B: the unchanged delay-aware tracker from the published controller follow-up.
+Both use both Doppler links, the same information-guided acquisition, full-history
+estimator and audited evidence gate, delayed first-order plant and no current.
+The estimator prior, gains, thresholds, action set, timing, search budget and
+sensor-noise settings are unchanged. The reference/treatment use identical
+initial state and exogenous sensor-noise realization within a seed. Current is
+not applied in either arm; the existing campaign remains the current comparison.
+Do not use simulator truth in a controller, planner, estimator or gate.
+
+Frozen settings and endpoints
+Use the published 440 s horizon, 220 two-second actions, two 4096-point sweeps,
+48 local starts, raw estimator, uniform-radius search, and default planner/gate.
+Use the original terminal, Tail80 and Dwell15 joint-success definitions, 7 m
+localization tolerance and 8 m formation tolerance. Keep every selected episode,
+including no-TRACK episodes and finite-horizon failures. Do not extend the horizon
+after observing a failure or tune a parameter on these data.
+Report counts/rates and paired differences, terminal localization and formation
+errors (median/p95/max and finite counts), first-TRACK time conditional on lock
+with its denominator, TRACK saturation/curvature with availability, and truth-
+invalid release/TRACK counts. These are descriptive stress results. No new
+acceptance margin or hypothesis of guaranteed success is imposed retroactively.
+
+Integrity and execution
+Freeze source hashes, this protocol and the complete selected seed list before
+the first full stress episode. Record exact runtime/interpreter and configurations.
+Run seeds and arms sequentially. Save each arm's JSON and full trace immediately;
+provide progress, completed/total and measured-runtime ETA in a readable log and
+machine-readable progress.json. Resume must check frozen hashes/configuration.
+Validate pairing and bitwise pre-first-TRACK trace identity excluding wall time;
+report any mismatch as an integrity error, not a scientific outcome. Verify one
+smoke reference reproduces the unmodified runner. Do not silently patch frozen
+source files. New runner glue may explicitly admit the new seed list while
+preserving the sealed-range guard.
+
+Interpretation limits
+This conditions on difficult starts within the original correct-prior domain.
+It is not a test of out-of-prior initialization, greater acoustic range, random
+nominal population success, unobserved current or calibrated vehicle dynamics.
+Initial distance from the leader centroid is not initial formation error. Large
+initial error can delay acquisition and leave less time for formation recovery;
+separate localization and formation failures in the analysis.
