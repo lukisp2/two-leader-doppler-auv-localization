@@ -49,13 +49,14 @@ No horizon was extended and no parameter was retuned after observing outcomes.
   reanalysis of 600 prior link/acquisition and 400 prior controller records.
 - The separate asset `iet-difficult-initial-conditions-v1.2.0.zip` contains
   all 100 episode JSONs, 100 trajectory NPZs, 50 noise NPZs, 27 frozen source
-  files and campaign provenance. Its publication status is in RELEASE_STATUS.
+  files and experiment records. It is available from the
+  [version 1.2.0 release](https://github.com/lukisp2/two-leader-doppler-auv-localization/releases/tag/v1.2.0).
 
-All scientific raw files are byte-preserved. The projection changes only
-private lookup-root labels and the dependent hashes in three files. The
-original and public hashes are recorded in `PROJECTION_MANIFEST.json`.
-The frozen glue source is retained for provenance; execute the portable
-`code/run_iet_difficult_initial_conditions.py` adapter instead.
+The numerical results, trajectories, and noise sequences are unchanged.
+Private local paths were removed from three metadata files; these changes are
+listed in `PROJECTION_MANIFEST.json`. The original source files record how the
+experiment was run. To reproduce it on another computer, use
+`code/run_iet_difficult_initial_conditions.py`.
 
 After extracting the raw asset, independently recalculate outcomes without
 running any simulation:
@@ -83,10 +84,10 @@ python code/run_iet_difficult_initial_conditions.py \
   --replicate-published --output results/iet_replication
 ```
 
-This flag identifies already published scenarios as a replication, not a fresh
-test. It verifies the newly generated initial states against the published
-cohort. Use a new directory or `--resume` with an unchanged run contract.
-The sealed 50000–50999 range remains prohibited.
+This flag reruns the published scenarios and checks their initial states against
+the released data. Use a new output directory, or `--resume` to continue a run
+with unchanged settings. The runner continues to exclude the reserved scenario
+range 50000–50999.
 
 The historical reanalysis accepts `UUV_DATA_ARCHIVE` (the v1.0.0 raw archive
 root containing its SHA256SUMS), `UUV_CONTROLLER_CAMPAIGN` (the complete earlier
@@ -95,9 +96,9 @@ root containing its SHA256SUMS), `UUV_CONTROLLER_CAMPAIGN` (the complete earlier
 The earlier controller raw campaign is a separate deposit from this 100-run
 asset; the published compact 400 rows alone cannot reproduce trace-level
 reanalysis. Do not attribute either later campaign to the v1.0.0 Zenodo DOI.
-The portable analyzer was rerun on all 1000 historical records; every numeric
-record and aggregate matched the original analysis. Only source labels and
-the analyzer hash differ, as recorded in `historical_analysis_projection.json`.
+The analysis script was rerun on all 1000 historical records and reproduced the
+original individual results and summaries. Changes to source labels and the
+script are listed in `historical_analysis_projection.json`.
 
 The main saturation metric uses any normalized command magnitude at least
 0.98. Historical nested controller diagnostics use a different near-exact

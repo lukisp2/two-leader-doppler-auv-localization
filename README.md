@@ -1,193 +1,101 @@
 # Two-Leader Doppler AUV Localization
 
-Reference implementation and reproducibility materials for:
+Simulation code and data for:
 
 > **Active Follower Localization Using Two-Leader Doppler Measurements for 3-D Autonomous Underwater Vehicle Formation Tracking**
 
-The repository contains the causal full-history Doppler estimator, retained-mode active acquisition planner, evidence-qualified acquire-to-track gate, delay-aware formation tracker, comparison estimators, stress generators, and scripts used to reproduce the manuscript tables and figures.
+This project studies how an underwater follower can estimate its position from
+Doppler signals transmitted by two moving leaders and then join their formation.
+The follower combines the measurement history with dead reckoning. While its
+position remains uncertain, it chooses maneuvers that help distinguish competing
+position estimates. It starts formation tracking after the estimates pass the
+specified consistency checks.
 
-## Scope
+The repository includes the localization method, acquisition planner, switching
+logic, delay-aware tracking controller, comparison methods, and scripts for the
+paper's experiments and figures. The proportional controller is retained for
+comparison. These are simulation models, not software validated on a vehicle.
 
-The follower receives broadcast leader positions and velocities, measures one-way Doppler range rate on one or two leader links, and dead-reckons its own motion. During `ACQUIRE`, it retains competing initial-position hypotheses and commands bounded maneuvers that improve weak information directions and separate plausible modes. It enters `TRACK` only after independent residual, consistency, separation, and stability checks pass.
+## Code and data
 
-After an evidence-qualified TRACK release, the current resubmission branch uses
-a deterministic delay-aware tracker with a Smith predictor, a causal reference
-governor, bumpless transfer, and command slew limits. The former stateless
-proportional tracker is retained as the paired reference arm.
+- [Version 1.2.0: source code and difficult-start data](https://github.com/lukisp2/two-leader-doppler-auv-localization/releases/tag/v1.2.0)
+- [Original software archive, version 1.0.0](https://doi.org/10.5281/zenodo.22214022)
+- [Original raw-data archive, version 1.0.0](https://doi.org/10.5281/zenodo.22214031)
 
-This is simulation research code. It is **not** certified guidance, navigation, or control software.
+The latest release compares the two controllers in 50 scenarios with large
+initial position and heading errors, without changing their settings. It
+includes all 100 simulation results, trajectories, and noise sequences.
+The delay-aware controller achieved terminal success in 48 of 50 scenarios
+and sustained tracking, as measured by Tail80, in 46 of 50.
+[Experiment details](docs/IET_REVISION_20261102.md) explain the scenario selection,
+both controllers' results, failures, and reproduction commands.
 
-## Release identifiers
-
-- source repository: <https://github.com/lukisp2/two-leader-doppler-auv-localization>;
-- source version and tag: `1.2.0` / `v1.2.0`;
-- source release date: `2026-11-02`;
-- preceding published version: `v1.1.1` (`2026-09-23`);
-- preceding software archive (`v1.0.0`): <https://doi.org/10.5281/zenodo.22214022>;
-- preceding raw-data archive (`v1.0.0`): <https://doi.org/10.5281/zenodo.22214031>.
-
-Version `v1.2.0` adds the frozen difficult-initial-condition comparison and the
-descriptive initial-condition reanalysis. It does not change the estimator,
-planner, gate or either controller. See
-[docs/IET_REVISION_20261102.md](docs/IET_REVISION_20261102.md) for results,
-limitations, raw-data packaging and portable reproduction commands.
-Version `v1.1.1` changed only figure presentation.
-
-The immutable Zenodo records correspond to `v1.0.0`. The preceding `v1.1.0`
-GitHub tag adds the delay-aware controller, the frozen controller-only
-qualification protocol, 400 row-level outcomes, compact paired results,
-provenance, tests, and Table 10/Fig. 9 regeneration. Those additions are
-public in Git but are not claimed to be present in the earlier DOI records.
-A validated projector is provided for a future versioned raw-trace deposit.
-The tagged source includes all 100 row-level difficult-start outcomes and
-their provenance. The complete raw campaign is prepared separately as
-`iet-difficult-initial-conditions-v1.2.0.zip`; its release-asset upload is
-pending. It is not contained in either preceding Zenodo record. The raw asset
-is not claimed as publicly downloadable until that upload is verified.
-
-## Release-validation environment
-
-- CPython 3.11.9
-- NumPy 2.3.3
-- Gymnasium 1.2.3
-- Matplotlib 3.10.6 for publication-figure regeneration
-- no Numba/JIT dependency
-
-This stack validates the released source tree, tests, compact table and figure
-generators, and the documented campaign reruns except the historical V35
-closed-loop stress campaign behind descriptive Table 11. That frozen campaign
-was executed with CPython 3.12.8, NumPy 2.2.1, Gymnasium 1.2.3, and no Numba,
-as recorded in its released campaign contract. Running V35 under the
-release-validation stack is a new replication, not an exact reconstruction of
-the historical software environment.
-
-Both documented stacks exclude Numba. Installing it can change floating-point
-execution order and prevent bit-for-bit reproduction of paths that are defined
-as bit-exact.
-
-## Repository layout
-
-```text
-code/                 flat source tree; historical module names are preserved
-tests/                standard-library unittest suite
-protocols/            frozen experiment protocols
-data/                  compact table inputs and archive pointers
-scripts/               table exporters, V40 postprocessor, and release checks
-docs/                  table mapping, provenance, and reproduction guide
-results/               generated summaries (not committed by default)
-```
+The repository also contains per-run results from the earlier 400-run controller
+comparison. Its full trajectory archive is not included in the new download.
+Neither later experiment is included in the original Zenodo archives.
+See [data coverage](data/DATA_INVENTORY.csv) for individual datasets.
 
 ## Installation
+
+The release was checked with Python 3.11.9, NumPy 2.3.3, Gymnasium 1.2.3, and
+Matplotlib 3.10.6. Use the supplied dependencies without optional Numba acceleration
+when reproducing the results.
 
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements-dev.txt
-```
-
-Check the exact interpreter and package versions:
-
-```bash
 python scripts/verify_environment.py
 ```
 
-## Tests
-
-The suite contains standard-library `unittest` cases and a small number of
-pytest-native parametrized checks. Run all of them through pytest:
+Run the tests from the repository root:
 
 ```bash
 PYTHONPATH=code python -m pytest tests -v
 ```
 
-The final archive-connected `v1.1.0` validation used the environment above,
-disabled the optional Numba import, enabled the full baseline-equivalence
-smoke, and reported **275 passed tests and 64 passed subtests**.
+Some tests require the original raw-data archive. Extract it and make its
+`data/raw/` directory available at the same location in this repository, either
+by copying it or using a symbolic link. The earlier closed-loop measurement-error
+experiment used Python 3.12.8 and NumPy 2.2.1. The recorded environments and data
+setup are described in the [reproduction guide](docs/REPRODUCIBILITY.md).
 
-Verify the lightweight source repository from its root:
+## Reproduce the experiments
 
-```bash
-python scripts/verify_sha256_manifest.py SHA256SUMS
+- [Experiment commands and data setup](docs/REPRODUCIBILITY.md)
+- [Inputs and scripts for the tables and figures](docs/TABLES_AND_DATA.md)
+- [Large initial position and heading errors](docs/IET_REVISION_20261102.md)
+- [Delayed vehicle response and current](docs/V40_QUALIFICATION_POSTPROCESSOR.md)
+- [Proportional and delay-aware tracking](docs/V41_CONTROLLER_REPAIR_AUDIT.md)
+
+The experiments include negative results. Some measurement errors cause
+localization or tracking to fail. The delay-aware controller improves tracking
+substantially but does not meet every predefined acceptance criterion: one
+localization-error increase exceeds the allowed limit. These limitations are
+reported alongside the improvements.
+
+## Repository layout
+
+```text
+code/       simulation, estimation, control, and experiment runners
+tests/      automated tests
+protocols/  experiment settings and evaluation rules
+data/       per-run results, table inputs, and links to raw data
+scripts/    analysis, export, and file-checking tools
+docs/       reproduction instructions and experiment details
+results/    locally generated results (not committed by default)
 ```
 
-The separate DOI dataset has its own manifest. After extracting
-`two-leader-doppler-auv-data-v1.0.0`, verify it independently and then expose
-its `data/raw/` tree at the same path in this repository (copying or a symbolic
-link are both acceptable):
+Historical version numbers in module names are retained so published commands
+continue to work. Small result tables are stored in Git; larger measurement and
+trajectory files are distributed through the releases and Zenodo.
 
-```bash
-python /path/to/repository/scripts/verify_sha256_manifest.py \
-  /path/to/two-leader-doppler-auv-data-v1.0.0/SHA256SUMS
-```
+## Citation and license
 
-See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) for campaign commands and [docs/TABLES_AND_DATA.md](docs/TABLES_AND_DATA.md) for the complete manuscript table/figure-to-artifact map and headless rendering commands.
-The archival publication sequence is recorded in
-[docs/RELEASE_WORKFLOW.md](docs/RELEASE_WORKFLOW.md).
-The summary-independent dynamic-response audit and compact eight-cell export
-are documented in
-[docs/V40_QUALIFICATION_POSTPROCESSOR.md](docs/V40_QUALIFICATION_POSTPROCESSOR.md).
-The paired post-TRACK controller repair, its one failed composite acceptance
-condition, and the corrected decision/seed-marker semantics are documented in
-[docs/V41_CONTROLLER_REPAIR_AUDIT.md](docs/V41_CONTROLLER_REPAIR_AUDIT.md).
-The additional difficult-start comparison and its independent raw-trace audit
-are documented in [docs/IET_REVISION_20261102.md](docs/IET_REVISION_20261102.md).
+Use [CITATION.cff](CITATION.cff) to cite source version 1.2.0. The two Zenodo DOIs
+above identify only version 1.0.0. No new DOI has been assigned to the later
+experiments.
 
-## Data policy
-
-Compact per-scenario CSV/JSON summaries used by the manuscript belong under
-`data/tables/` and are suitable for Git. Small path-sanitized campaign
-contracts, decisions, and audits for the planner and closed-loop stress
-experiments are kept under `data/provenance/`; their export manifests retain
-both original and public SHA-256 values. Large episode JSON files, measurement
-histories, noise tapes, and trajectory NPZ files belong in the separately
-versioned DOI dataset. The file-level inventory and expected destinations are
-recorded in `data/DATA_INVENTORY.csv`. The repository `SHA256SUMS` covers the
-Git release, while the dataset's own `SHA256SUMS` covers every external raw
-artifact; neither manifest is presented as covering the other deposit.
-
-The dynamic-response campaign is deposited through the tested
-`scripts/project_v40_doi_campaign.py` portability boundary: only its inert
-environment-metadata path changes, while all recorded outcomes, trajectories,
-noise tapes, and frozen source files remain byte-for-byte identical.
-
-The controller-repair update follows the same boundary through
-`scripts/project_v41_doi_campaign.py`. Git contains all 400 row-level outcomes,
-four compact publication cells, a row-derived results document, and a
-path-sanitized provenance bundle. Its complete JSON/NPZ campaign remains local
-until it is assigned to the next DOI data version.
-
-The closed-loop stress data used descriptively in manuscript Table 11
-come from a campaign that was **invalid under its prespecified joint runtime
-gate**: 5 of 1200 optional bias-switch runs exceeded the 2-s decision limit
-(maximum 2.7017 s). The primary controller cells remained below 1.49 s, but
-the frozen rule was campaign-wide. The released rows are retained to expose
-that negative audit result; they are not presented as a valid robustness
-qualification. No closed-loop-stress figure is used in the resubmission.
-Regeneration of the archived diagnostic plot requires the explicit
-`--allow-invalid-descriptive` acknowledgement documented in
-`docs/TABLES_AND_DATA.md`.
-
-The controller-repair qualification is integrity-valid but did not meet every
-prespecified acceptance condition. Terminal success increased from 38% to 95%
-without current and from 26% to 95% with visible current; Tail80 success rose
-from 2% to 91% and from 6% to 92%. The no-current terminal-localization p95
-difference was 0.5669 m, exceeding the frozen 0.50-m non-inferiority margin by
-0.0669 m. The frozen ambiguous label is preserved, while the public audit
-records the precise interpretation
-`VALID_COMPLETE__COMPOSITE_ACCEPTANCE_NOT_MET`.
-
-## Citation
-
-Use the metadata in [CITATION.cff](CITATION.cff) for source tag `v1.2.0`.
-DOI `10.5281/zenodo.22214022` identifies only the preceding
-`v1.0.0` software snapshot, and DOI `10.5281/zenodo.22214031` identifies its
-separate raw-data archive; neither DOI contains the controller addendum. The
-journal DOI will be added after article publication. Source-tag availability
-does not imply availability of a separately uploaded raw-data asset.
-
-## License
-
-Source code is released under the [BSD 3-Clause License](LICENSE). Released
-simulation data use [CC BY 4.0](data/LICENSE.md), unless an individual artifact
-states otherwise; DOI-archive metadata must repeat the applicable license.
+Source code uses the [BSD 3-Clause License](LICENSE). Simulation data use
+[CC BY 4.0](data/LICENSE.md), unless an individual file states otherwise.
